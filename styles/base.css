@@ -1,3 +1,126 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+header {
     background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    background-color: black;
+    width: 100%;
+    justify-content: center;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Playfair Display";
+}
+
+.img img {
+    height: 200px;
+    width: auto;
+    margin: 10px;
+    padding: 20px;
+}
+
+footer p img {
+    height: 30px;
+    width: auto;
+    margin-top: 8px;
+    padding-left: 8px;
+}
+
+.img {
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 100%;
+    font-size: 20px;
+    font-family: "Roboto";
+    width: 100%;
+    color: white;
+    padding: 8px 0;
+
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 80px;
+    font-size: 40px;
+    font-family: "Roboto";
+}
+
+h2 {
+    text-decoration: underline;
+    font-family: "Roboto";
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 60%;
+    margin: auto;
+}
+
+.card {
+    display: grid;
+    grid-template: 1fr/1fr;
+    border: solid grey 1px;
+    width: 80%;
+    margin: 8px;
+}
+
+ul li {
+    list-style: none;
+
+}
+
+ul {
+    padding-top: 10px;
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: blue;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+footer p {
+    color: white;
+    padding: 5px;
+    font-family: "Playfair Display";
+}
+
+#lastModified {
+    color: gold;
+    padding-bottom: 10px;
 }
