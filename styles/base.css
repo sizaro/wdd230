@@ -124,3 +124,36 @@ footer p {
     color: gold;
     padding-bottom: 10px;
 }
+
+header .designHeader {
+    font-size: 30px;
+}
+
+.design main {
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 4px blue solid;
+    background-color: green;
+    color: blue;
+
+}
+
+.principles1 {
+    grid-row: 1/2;
+}
+
+.principles1 img {
+    width: 300px;
+}
+
+.principles2 {
+    grid-row: 2/3;
+
+}
+
+.principles3 {
+    grid-row: 3/4;
+}
