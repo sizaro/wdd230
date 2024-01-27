@@ -12,3 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     datefun();
 });
+
+const humburgerIcon = document.querySelector("#humburger");
+const menuIcon = document.querySelector(".menu");
+humburgerIcon.addEventListener("click", () => {
+    humburgerIcon.classList.toggle("show");
+    menuIcon.classList.toggle("show");
+
+})
