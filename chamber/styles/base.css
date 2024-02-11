@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display&display=swap');
+
+:root {
+    --primary-color: #1d2012;
+    --secondary-color: #8eaa46;
+    --accent1-color: #b3001b;
+    --accent2-color: #3f84c0;
+    --accent3-color: #ebedef;
+
+    --heading-font: "Lobster&family";
+    --paragraph-font: "Playfair+Display";
+
+
+    --headline-color-on-white: #1d2012;
+    --headline-color-on-color: #ebedef;
+    --paragraph-color-on-white: #1d2012;
+    --paragraph-color-on-color: #ebedef;
+    --paragraph-background-color: #1d2012;
+    --nav-link-color: #ebedef;
+    --nav-background-color: #3f84c0;
+    --nav-hover-link-color: #8eaa46;
+    --nav-hover-background-color: #b3001b;
+
+    --base-font-size: 16px;
+    --line-height: 1.5;
+    --spacing-unit: 8px;
+    --padding: var(--spacing-unit);
+    --margin: var(--spacing-unit);
+    --border-width: 1px;
+    --border-radius: 4px;
+    --z-index-header: 100;
+    --z-index-modal: 200;
+    --transition-duration: 0.3s;
+    --display-on-items: grid;
+    --display-on-content: flex;
+
+
+
+}
+
+* body {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--headline-color-on-white);
+}
+
+header {
+    position: relative;
+    display: var(--display-on-content);
+    flex-direction: row;
+    color: var(--headline-color-on-color);
+    background-color: var(--paragraph-color-on-white);
+    margin-bottom: 4px;
+}
+
+.navigation {
+    margin-left: 700px;
+}
+
+button {
+    position: relative;
+    bottom: -10px;
+    left: 100px;
+}
+
+h2,
+div,
+p {
+    color: var(--headline-color-on-color);
+}
+
+.heroimg img {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    z-index: -1;
+    margin: 0;
+}
+
+.heroimg {
+    position: relative;
+    margin: 0 auto;
+}
+
+#logoimg img {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.navigation li {
+    list-style: none;
+    padding-left: 40px;
+}
+
+.navigation {
+    display: flex;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template: 4fr/1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    background-color: var(--accent2-color);
+}
+
+.event {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.weather {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.advertisement {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
