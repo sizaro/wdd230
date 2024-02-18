@@ -55,14 +55,111 @@ header {
     margin-bottom: 4px;
 }
 
+
+
 .navigation {
     margin-left: 700px;
 }
 
-button {
-    position: relative;
-    bottom: -10px;
-    left: 100px;
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.event,
+.weather,
+#advertisement,
+.advert,
+.advert2,
+.advert3,
+.advert4 {
+    border: 1px solid white;
+    background-color: slategray;
+
+}
+
+.promo {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template: 1fr/1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 10px;
+    margin-top: 10px;
+
+
+}
+
+.advert {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    height: 200px;
+
+}
+
+.advert2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 200px;
+}
+
+.advert3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
+    height: 200px;
+}
+
+.advert4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    width: 100%;
+    height: 200px;
+}
+
+.container {
+    display: grid;
+    grid-template: 3fr/3fr;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.event {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 100%;
+}
+
+.weather {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#advertisement {
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.joinButton {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    background-color: var(--accent2-color);
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.joinButton a {
+    text-decoration: none;
 }
 
 h2,
@@ -71,17 +168,16 @@ p {
     color: var(--headline-color-on-color);
 }
 
-.heroimg img {
-    position: absolute;
-    width: 600px;
-    height: auto;
-    z-index: -1;
-    margin: 0;
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50%;
 }
 
-.heroimg {
-    position: relative;
-    margin: 0 auto;
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #logoimg img {
@@ -92,9 +188,18 @@ p {
     z-index: 1;
 }
 
+#logoimg {
+    text-align: justify;
+}
+
 .navigation li {
     list-style: none;
     padding-left: 40px;
+}
+
+.zoj li {
+    margin-left: 40px;
+    color: white;
 }
 
 .navigation {
@@ -102,35 +207,134 @@ p {
     z-index: -1;
 }
 
-.container {
-    position: relative;
-    display: grid;
-    grid-template: 4fr/1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    margin: 0 auto;
+footer {
+    display: flex;
     text-align: center;
+    padding-right: 15px;
+    margin-left: 400px;
 }
 
-.hero {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: 100%;
-    background-color: var(--accent2-color);
+p#lastUpdated {
+    margin-left: 10px;
+
 }
 
-.event {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
+@media screen and (max-width:769px) {
 
-.weather {
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
+    * {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
 
-.advertisement {
-    grid-column: 1/2;
-    grid-row: 4/5;
+    header {
+        position: relative;
+        display: block;
+        left: 6px;
+        color: var(--headline-color-on-color);
+        background-color: var(--paragraph-color-on-white);
+    }
+
+    .zoj li {
+        margin-left: 10px;
+        color: white;
+    }
+
+
+    .navigation {
+        margin-left: 5px;
+    }
+
+    .joinButton {
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        background-color: var(--accent2-color);
+        border-radius: 10px;
+        padding: 2px;
+        cursor: pointer;
+        width: 80px;
+        height: auto;
+        text-decoration: none;
+        text-align: center;
+        padding: 2px;
+
+    }
+
+    .joinButton a {
+        text-decoration: none;
+    }
+
+    .promo {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template: 1fr 1fr 1fr 1fr/1fr;
+        gap: 10px;
+        margin-top: 10px;
+
+
+    }
+
+    .advert {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 100%;
+        height: 200px;
+
+    }
+
+    .advert2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        height: 200px;
+    }
+
+    .advert3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        width: 100%;
+        height: 200px;
+    }
+
+    .advert4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        width: 100%;
+        height: 200px;
+    }
+
+    .container {
+        display: grid;
+        grid-template: 1fr 1fr/1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .event {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 100%;
+    }
+
+    .weather {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    footer {
+        display: flex;
+        text-align: center;
+        padding-right: 15px;
+        margin-left: 40px;
+    }
+
+    p#lastUpdated {
+        margin-left: 10px;
+
+    }
 }

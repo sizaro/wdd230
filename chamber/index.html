@@ -21,60 +21,80 @@
 </head>
 
 <body>
-    <div class="heroimg" style="background-image: url('chamber/images/jinja-city.jpeg');">
-        <header>
-            <div id="logoimg"><img src="images/logo.jpg" class="logoimg" alt="zoj-logo"></div>
-            <nav>
-                <ul class="navigation">
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>DISCOVER</li>
-                    <li><a href=""></a>DIRECTORY</li>
-                    <li><a href=""></a>JOIN</li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <div id="logoimg"><img src="images/logo.jpg" class="logoimg" alt="zoj-logo"> <span id="chamber">
+                <h1></h1>
+            </span></div>
+        <nav>
+            <ul class="navigation">
+                <li class="zoj"><a href="">Zion of Jinja Chamber of Commerce</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="">DISCOVER</a></li>
+                <li><a href="">DIRECTORY</a></li>
+                <li><a href="">JOIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width:769px)" title="small">
+            <source srcset="images/hero-medium.webp" media="(max-width:999px)">
+            <source srcset="images/hero-large.webp" media="(min-width:1000px)" title="large">
+            <img src="images/hero-large.webp" alt="heroimg" width="1200vw" height="600vw">
+        </picture>
+        <div class="joinButton">
+            <a href="">
+                <h2>Join Us</h2>
+            </a>
+        </div>
+
     </div>
-    <main class="container">
-        <section class="hero">
-            <picture><img src="images/hero-image.jpg" alt="heroimg"></picture>
-            <button>MORE</button>
-        </section>
-        <section class="event">
-            <h2>Events</h2>
-            <div class="event1">
-                <section>
-                    <img src="" alt="">
-                    <p></p>
-                </section>
-            </div>
-        </section>
-        <section class="weather">
-            <h2>Weather Now</h2>
-        </section>
-        <section class="advertisement">
-            <h2>Avertisement</h2>
-            <div>
+    <main>
+        <div class="container">
+            <section class="event">
+                <h2>Events</h2>
+                <h1>Soap making</h1>
+                <div class="event1">
+                    <section>
+                        <img src="" alt="">
+                        <p>Join us as to our grand opening of making soap</p>
+                    </section>
+                </div>
+            </section>
+            <section class="weather">
+                <h2>Weather Now</h2>
+                <div>
+                    <p>Temperature <span><input type="number" id="tempValue"></span> ▫F</p>
+                    <p>Wind Speed <span><input type="number" id="speedValue"></span>m/hr</p><br>
+                </div>
+                <div>
+                    <p>The Wind Chill is <span id="windchill"></span></p>
+                </div>
+            </section>
+        </div>
+        <div class="promo">
+            <section class="advert">
                 <img src="" alt="">
-                <p></p>
-            </div>
-            <div>advert2
+                <p>service</p>
+            </section>
+            <section class="advert2">
                 <img src="" alt="">
-                <p></p>
-            </div>
-            <div>advert3
+                <p>decoration</p>
+            </section>
+            <section class="advert3">
                 <img src="" alt="">
-                <p></p>
-            </div>
-            <div>advert4
+                <p>farming</p>
+            </section>
+            <section class="advert4">
                 <img src="" alt="">
-                <p></p>
-            </div>
-        </section>
+                <p>eduaction</p>
+            </section>
+        </div>
     </main>
     <footer>
-        <p class="copy">&copy;<span id="currentYear"></span> RONALD BAMUTESIZA | WDD 230
+        <p class="copy">&copy;<span id="currentYear"></span> RONALD BAMUTESIZA | WDD 230 project |
         </p>
         <p id="lastUpdated"></p>
     </footer>
-    <script src="chamber/scripts/chamber.js"></script>
+    <script src="scripts/chamber.js"></script>
 </body>
