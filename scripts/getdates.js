@@ -36,3 +36,19 @@ modeButton.addEventListener("click", () => {
     }
 });
 
+
+let visitsDisplay = document.querySelector(".card2");
+let paraDisplay = document.createElement("p");
+visitsDisplay.appendChild(paraDisplay);
+let numberOfVisits = Number(localStorage.getItem("visits-num"));
+paraDisplay.style.textAlign = "center"
+numberOfVisits++;
+localStorage.setItem("visits-num", numberOfVisits);
+
+
+if (numberOfVisits !== 0) {
+    paraDisplay.textContent = `Page visits: ${numberOfVisits}`;
+}
+else {
+    paraDisplay.textContent = "This is your first visit";
+}
