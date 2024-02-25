@@ -6,7 +6,39 @@
 }
 
 body {
-    height: 100vh;
+    overflow-x: hidden;
+}
+
+.hero {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.heroLabel {
+    position: absolute;
+    top: 5px;
+    right: 130px;
+    border: 1px green;
+    padding: 2px;
+    background-color: darkgrey;
+    opacity: 0.5;
+}
+
+.hero p {
+    margin: 0;
+    padding: .30rem;
+    color: black;
+    font-size: 1.5rem;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 header {
@@ -32,9 +64,11 @@ header a#humburger::before {
 }
 
 header #humburger {
+    position: absolute;
+    right: 10px;
     text-decoration: none;
     margin-bottom: 10rem;
-    margin-left: 2rem;
+    margin-left: 0rem;
 }
 
 nav.menu {
@@ -156,7 +190,7 @@ ul {
 
 
 
-footer {
+#footer {
     text-align: center;
     background-color: blue;
 }
@@ -217,7 +251,7 @@ header .designHeader {
 
 #mode {
     position: absolute;
-    left: 26rem;
+    left: 21rem;
     top: 0.5rem;
     font-size: 10rem;
     cursor: pointer;
@@ -231,6 +265,11 @@ header .designHeader {
 
 
 @media screen and (min-width: 40em) {
+    .hero {
+        width: 100%;
+        height: auto;
+    }
+
     header {
         background-color: blue;
         display: flex;
