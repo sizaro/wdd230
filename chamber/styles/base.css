@@ -228,6 +228,14 @@ p#lastUpdated {
         overflow-x: hidden;
     }
 
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        display: block;
+        margin: 0 0;
+        max-width: 100%;
+    }
+
     header {
         position: relative;
         display: block;
@@ -235,15 +243,21 @@ p#lastUpdated {
 
     }
 
-    .zoj li {
-        margin-left: 10px;
+    .zoj {
+        margin-left: 60px;
         color: white;
     }
 
     .navigation {
+        margin-left: 80px;
         display: block;
         z-index: 1;
     }
+
+    nav ul {
+        display: hidden;
+    }
+
 
     .navigation li {
         list-style: none;
