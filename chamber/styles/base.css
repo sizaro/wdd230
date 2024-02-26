@@ -56,6 +56,12 @@ header {
     margin-bottom: 4px;
 }
 
+header nav li:hover {
+    text-decoration: underline;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
 
 
 .navigation {
@@ -276,6 +282,10 @@ p#lastUpdated {
         z-index: 1;
     }
 
+    header nav li:hover {
+        background-color: var(--accent2-color);
+    }
+
     nav a {
         color: white;
         text-decoration: none;
@@ -324,11 +334,8 @@ p#lastUpdated {
         bottom: 29px;
     }
 
-    nav.menu {
-        display: none;
-    }
 
-    nav.show {
+    header nav.show {
         display: block;
     }
 
