@@ -240,10 +240,16 @@ p#lastUpdated {
 
 @media screen and (max-width:769px) {
 
+    html {
+        overflow-x: hidden;
+        background-color: white;
+        max-width: 100%;
+
+    }
+
     * body {
-        position: relative;
-        justify-content: center;
-        align-items: center;
+        box-sizing: border-box;
+        max-width: 100vhs;
     }
 
     body {
@@ -254,6 +260,7 @@ p#lastUpdated {
         max-width: 100%;
         margin: 0 20px;
         overflow-wrap: wrap;
+        padding: 0 10px;
     }
 
     header {
@@ -264,7 +271,7 @@ p#lastUpdated {
     }
 
     .navigation {
-        margin-left: 20px;
+        margin-left: 40px;
         display: block;
         z-index: 1;
     }
@@ -276,7 +283,7 @@ p#lastUpdated {
 
     .zoj {
         margin-top: 2px;
-        margin-left: 30px;
+        margin-left: 15px;
         color: white;
         text-align: center;
         width: 400px;
@@ -293,30 +300,26 @@ p#lastUpdated {
         text-decoration: none;
     }
 
-    nav ul {
+    nav {
         display: none;
     }
 
-    header a#humburger::before {
+    header a::before {
+        position: absolute;
         content: "☰";
         text-decoration: none;
-        font-size: 50px;
+        font-size: 30px;
         color: white;
+        right: 10px;
+        bottom: 40px;
+        cursor: pointer;
     }
 
     #humburger.show::before {
         content: "×";
         text-decoration: none;
-        font-size: 50px;
+        font-size: 30px;
         color: white;
-    }
-
-    header #humburger {
-        position: absolute;
-        right: 10px;
-        text-decoration: none;
-        margin-bottom: 10rem;
-        margin-left: 0rem;
     }
 
     nav.menu {
@@ -428,9 +431,12 @@ p#lastUpdated {
 
     footer {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         padding-right: 15px;
-        margin-left: 40px;
+        margin-left: 16px;
     }
 
     p#lastUpdated {
