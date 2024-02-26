@@ -44,6 +44,7 @@
 
 body {
     background-color: var(--headline-color-on-white);
+    overflow-x: hidden;
 }
 
 header {
@@ -58,7 +59,7 @@ header {
 
 
 .navigation {
-    margin-left: 700px;
+    margin-left: 80px;
 }
 
 nav a {
@@ -66,6 +67,14 @@ nav a {
     text-decoration: none;
 }
 
+.zoj {
+    margin-top: 10px;
+    margin-left: 400px;
+    color: white;
+    text-align: center;
+    width: 400px;
+    font-size: larger;
+}
 
 .event,
 .weather,
@@ -244,6 +253,7 @@ p#lastUpdated {
     }
 
     .zoj {
+        margin-bottom: 20px;
         margin-left: 60px;
         color: white;
     }
