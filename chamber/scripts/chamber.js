@@ -43,6 +43,7 @@ darkModeButton.addEventListener("click", () => {
     darkMode.classList.toggle("dark-mode");
 
     if (darkMode.classList.contains("dark-mode")) {
+        document.querySelector("#mode").style.backgroundColor = "white"
         document.querySelector(".joinButton").style.backgroundColor = "black";
         document.querySelectorAll("section").forEach(section => {
             section.style.backgroundColor = "black";
