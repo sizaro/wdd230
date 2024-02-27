@@ -29,9 +29,34 @@ speedInput.addEventListener('input', updateWindChill);
 updateWindChill();
 
 const humburgerIcon = document.querySelector("#humburger");
-const menuIcon = document.querySelector(".menu");
+const menuIcon = document.querySelector(".navigation");
 humburgerIcon.addEventListener("click", () => {
     humburgerIcon.classList.toggle("show");
     menuIcon.classList.toggle("show");
+
+})
+
+let darkMode = document.querySelector("body");
+let darkModeButton = document.querySelector("#mode");
+
+darkModeButton.addEventListener("click", () => {
+    darkMode.classList.toggle("dark-mode");
+
+    if (darkMode.classList.contains("dark-mode")) {
+        document.querySelector(".joinButton").style.backgroundColor = "black";
+        document.querySelectorAll("section").forEach(section => {
+            section.style.backgroundColor = "black";
+            section.style.color = "white";
+        }
+        )
+    }
+    else {
+        document.querySelector(".joinButton").style.backgroundColor = "blue";
+        document.querySelectorAll("section").forEach(section => {
+            section.style.backgroundColor = "blue";
+            section.style.color = "white";
+        }
+        )
+    }
 
 })

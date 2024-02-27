@@ -42,9 +42,14 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: var(--accent3-color);
+}
+
 body {
     background-color: var(--headline-color-on-white);
     overflow-x: hidden;
+    margin: 0 10px;
 }
 
 header {
@@ -65,13 +70,15 @@ header nav li:hover {
 
 
 .navigation {
-    margin-left: 50px;
+    margin-left: 20spx;
 }
 
 nav a {
     color: white;
     text-decoration: none;
 }
+
+
 
 .zoj {
     margin-top: 2px;
@@ -253,6 +260,20 @@ p#lastUpdated {
 
 }
 
+#mode {
+    position: absolute;
+    left: 80rem;
+    top: 0.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+
+#mode::before {
+    content: "🌓";
+    background-color: #3f84c0;
+}
+
 @media screen and (max-width:769px) {
 
     html {
@@ -344,7 +365,7 @@ p#lastUpdated {
     }
 
 
-    header nav.show {
+    header ul.show {
         display: block;
     }
 
