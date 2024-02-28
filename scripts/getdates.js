@@ -21,45 +21,64 @@ humburgerIcon.addEventListener("click", () => {
 
 })
 
-const modeButton = document.querySelector("#mode");
-const body = document.querySelector("#body");
-const header = document.querySelector(".header");
-const footer = document.querySelector("#footer");
-const nav = document.querySelector(".nav");
-const cad = document.querySelector(".cad");
-const cad1 = document.querySelector(".cad1");
 
-modeButton.addEventListener("click", () => {
-    if (modeButton.textContent.includes("🕶️")) {
-        body.style.background = "#000";
-        body.style.color = "#fff";
-        header.style.background = "#000";
-        header.style.color = "#fff";
-        footer.style.background = "#000";
-        footer.style.color = "#fff";
-        nav.style.background = "#000";
-        nav.style.color = "#fff";
-        cad.style.background = "#000";
-        cad.style.color = "fff";
-        cad1.style.background = "#000";
-        cad1.style.color = "#fff";
+document.addEventListener("DOMContentLoaded", () => {
+    let modeButton = document.querySelector("#mode");
+    let darkBody = document.querySelector("body");
+
+
+    /*const modeButton = document.querySelector("#mode");
+    const darkBody = document.querySelector("body");
+    const header = document.querySelector(".header");
+    const footer = document.querySelector("#footer");
+    const nav = document.querySelector(".nav");
+    const cad = document.querySelector(".cad");
+    const cad1 = document.querySelector(".cad1");*/
+
+    if (modeButton) {
         modeButton.textContent = "🔆";
-    } else {
-        body.style.background = "white";
-        body.style.color = "black";
-        header.style.background = "blue";
-        header.style.color = "#white";
-        footer.style.background = "blue";
-        footer.style.color = "white";
-        nav.style.background = "#eee";
-        nav.style.color = "#000";
-        cad.style.background = "blue";
-        cad.style.color = "white";
-        cad1.style.background = "blue";
-        cad1.style.color = "white";
-        modeButton.textContent = "🕶️";
     }
-});
+
+    if (darkBody.classList.contains("dark-theme")) {
+        modeButton.textContent = "🌙";
+    }
+
+    modeButton.addEventListener("click", () => {
+        darkBody.classList.toggle("dark-theme");
+
+        if (darkBody.classList.contains("dark-theme")) {
+
+            document.querySelector("header").style.backgroundColor = "black";
+            document.querySelector("header").style.color = "white";
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
+            document.querySelector(".nav").style.backgroundColor = "black";
+            document.querySelector(".nav").style.color = "white";
+            document.querySelector(".cad").style.backgroundColor = "black";
+            document.querySelector(".cad").style.color = "white";
+            document.querySelector(".cad1").style.backgroundColor = "black";
+            document.querySelector(".cad1").style.color = "white";
+            document.querySelector("body").style.backgroundColor = "black";
+
+            modeButton.textContent = "🌙";
+        }
+        else {
+            document.querySelector("header").style.backgroundColor = "blue";
+            document.querySelector("header").style.color = "#000";
+            document.querySelector("footer").style.backgroundColor = "blue";
+            document.querySelector("footer").style.color = "white";
+            document.querySelector(".nav").style.backgroundColor = "black"
+            document.querySelector(".nav").style.color = "white";
+            document.querySelector(".cad").style.backgroundColor = "blue";
+            document.querySelector(".cad").style.color = "white";
+            document.querySelector(".cad1").style.backgroundColor = "blue";
+            document.querySelector(".cad1").style.color = "white";
+            modeButton.textContent = "🔆";
+
+        }
+    });
+
+})
 
 
 let visitsDisplay = document.querySelector(".card2");
@@ -71,7 +90,7 @@ numberOfVisits++;
 localStorage.setItem("visits-num", numberOfVisits);
 
 
-if (numberOfVisits !== 1) {
+if (numberOfVisits > 0) {
     paraDisplay.textContent = `Page visits: ${numberOfVisits}`;
 }
 else {

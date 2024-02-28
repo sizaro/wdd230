@@ -251,7 +251,7 @@ header .designHeader {
 
 #mode {
     position: absolute;
-    left: 21rem;
+    left: 23rem;
     top: 0.5rem;
     font-size: 10rem;
     cursor: pointer;
@@ -259,9 +259,9 @@ header .designHeader {
 
 }
 
-#mode::before {
+/*#mode::before {
     content: "🌓";
-}
+}*/
 
 
 @media screen and (min-width: 40em) {
