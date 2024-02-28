@@ -50,7 +50,7 @@ darkModeButton.addEventListener("click", () => {
             section.style.color = "white";
         }
         )
-        darkModeButton.documentElement.style.setProperty("🌞");
+        darkModeButton.textContent = "🌙";
     }
     else {
         darkModeButton.style.setProperty('--before-content-mode', '');
@@ -60,7 +60,8 @@ darkModeButton.addEventListener("click", () => {
             section.style.color = "white";
         }
         )
-        darkModeButton.documentElement.style.setProperty('--before-content-mode', "🌞");
+        darkModeButton.textContent = "🌞";
+        darkModeButton.textContent.style.backgroundColor = "black"
     }
 
 })
