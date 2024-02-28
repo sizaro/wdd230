@@ -271,11 +271,6 @@ p#lastUpdated {
 
 }
 
-#mode::before {
-    content: var(--before-content-mode);
-    color: #1d2012;
-}
-
 @media screen and (max-width:769px) {
 
     html {
@@ -482,6 +477,16 @@ p#lastUpdated {
 
     p#lastUpdated {
         margin-left: 10px;
+
+    }
+
+    #mode {
+        position: absolute;
+        left: 24.4rem;
+        top: 1.9rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: black;
 
     }
 }
