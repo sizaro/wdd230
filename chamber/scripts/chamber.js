@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             )
             darkModeButton.textContent = "🌙";
+            darkModeButton.style.backgroundColor = "black";
         }
         else {
             darkModeButton.style.setProperty('--before-content-mode', '');
@@ -70,7 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             )
             darkModeButton.textContent = "🌞";
-            darkModeButton.textContent.style.backgroundColor = "black"
+            darkModeButton.style.backgroundColor = "white";
+
         }
 
     })
