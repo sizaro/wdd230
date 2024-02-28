@@ -50,14 +50,17 @@ darkModeButton.addEventListener("click", () => {
             section.style.color = "white";
         }
         )
+        darkModeButton.documentElement.style.setProperty("🌞");
     }
     else {
-        document.querySelector(".joinButton").style.backgroundColor = "blue";
+        darkModeButton.style.setProperty('--before-content-mode', '');
+        document.querySelector(".joinButton").style.backgroundColor = "#3f84c0";
         document.querySelectorAll("section").forEach(section => {
-            section.style.backgroundColor = "blue";
+            section.style.backgroundColor = "#3f84c0";
             section.style.color = "white";
         }
         )
+        darkModeButton.documentElement.style.setProperty('--before-content-mode', "🌞");
     }
 
 })

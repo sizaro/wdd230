@@ -9,6 +9,7 @@
 
     --heading-font: "Lobster&family";
     --paragraph-font: "Playfair+Display";
+    --before-content-mode: "🌓";
 
 
     --headline-color-on-white: #1d2012;
@@ -266,12 +267,13 @@ p#lastUpdated {
     top: 0.2rem;
     font-size: 1.5rem;
     cursor: pointer;
+    background-color: black;
 
 }
 
 #mode::before {
-    content: "🌓";
-    background-color: #3f84c0;
+    content: var(--before-content-mode);
+    color: #1d2012;
 }
 
 @media screen and (max-width:769px) {
