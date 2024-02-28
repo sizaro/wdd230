@@ -204,6 +204,19 @@ h1 {
     text-decoration: none;
 }
 
+.text-overlay::before {
+    position: absolute;
+    content: "large";
+    top: 28px;
+    right: 450px;
+    width: 100px;
+    height: auto;
+    padding: 15px;
+    font-size: 40px;
+    background-color: var(--headline-color-on-white);
+    color: var(--accent2-color);
+}
+
 h2,
 div,
 p {
@@ -271,7 +284,7 @@ p#lastUpdated {
 
 }
 
-@media screen and (max-width:769px) {
+@media screen and (min-width:300px) and (max-width:769px) {
 
     html {
         overflow-x: hidden;
@@ -405,6 +418,19 @@ p#lastUpdated {
         text-decoration: none;
     }
 
+    .text-overlay::before {
+        position: absolute;
+        content: "small";
+        top: 10px;
+        right: 100px;
+        width: 100px;
+        height: auto;
+        padding: 15px;
+        font-size: 40px;
+        background-color: var(--headline-color-on-white);
+        color: var(--accent2-color);
+    }
+
     .promo {
         display: grid;
         justify-content: center;
@@ -482,7 +508,240 @@ p#lastUpdated {
 
     #mode {
         position: absolute;
-        left: 24.4rem;
+        left: 40rem;
+        top: 1.9rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: black;
+
+    }
+}
+
+@media screen and (min-width:770px) and (max-width:999px) {
+
+    html {
+        overflow-x: hidden;
+        background-color: white;
+        max-width: 100%;
+
+    }
+
+    * body {
+        box-sizing: border-box;
+        max-width: 100vh;
+    }
+
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 20px;
+        overflow-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    header {
+        position: relative;
+        display: block;
+        columns: var(--headline-color-on-white);
+
+    }
+
+    .navigation {
+        margin-left: 40px;
+        display: block;
+        z-index: 1;
+    }
+
+    header nav li:hover {
+        background-color: var(--accent2-color);
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .zoj {
+        margin-top: 2px;
+        margin-left: 15px;
+        color: white;
+        text-align: center;
+        width: 400px;
+        font-size: larger;
+
+    }
+
+    .zoj :hover {
+        border: 4px solid white;
+        padding: 4px;
+    }
+
+    .zoj a {
+        text-decoration: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header a::before {
+        position: absolute;
+        content: "☰";
+        text-decoration: none;
+        font-size: 30px;
+        color: white;
+        right: 10px;
+        bottom: 40px;
+        cursor: pointer;
+    }
+
+    header a.show::before {
+        position: absolute;
+        content: "×";
+        text-decoration: none;
+        font-size: 50px;
+        color: white;
+        bottom: 29px;
+    }
+
+
+    header ul.show {
+        display: block;
+    }
+
+
+    .navigation li {
+        list-style: none;
+        padding-left: 4px;
+        z-index: 999;
+    }
+
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 50%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .joinButton {
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        background-color: var(--accent2-color);
+        border-radius: 10px;
+        padding: 2px;
+        cursor: pointer;
+        width: 80px;
+        height: auto;
+        text-decoration: none;
+        text-align: center;
+        padding: 2px;
+
+    }
+
+    .joinButton a {
+        text-decoration: none;
+    }
+
+    .text-overlay::before {
+        position: absolute;
+        content: "medium";
+        top: 20px;
+        right: 250px;
+        width: 100px;
+        height: auto;
+        padding: 15px;
+        font-size: 30px;
+        background-color: var(--headline-color-on-white);
+        color: var(--accent2-color);
+    }
+
+    .promo {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template: 1fr 1fr 1fr 1fr/1fr;
+        gap: 10px;
+        margin-top: 10px;
+
+
+    }
+
+    .advert {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 100%;
+        height: 200px;
+
+    }
+
+    .advert2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        height: 200px;
+    }
+
+    .advert3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        width: 100%;
+        height: 200px;
+    }
+
+    .advert4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        width: 100%;
+        height: 200px;
+    }
+
+    .container {
+        display: grid;
+        grid-template: 1fr 1fr/1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .event {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 100%;
+    }
+
+    .weather {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-right: 15px;
+        margin-left: 16px;
+    }
+
+    p#lastUpdated {
+        margin-left: 10px;
+
+    }
+
+    #mode {
+        position: absolute;
+        left: 10%;
         top: 1.9rem;
         font-size: 1.5rem;
         cursor: pointer;
