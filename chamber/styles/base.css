@@ -508,7 +508,7 @@ p#lastUpdated {
 
     #mode {
         position: absolute;
-        left: 40rem;
+        right: 80rem;
         top: 1.9rem;
         font-size: 1.5rem;
         cursor: pointer;
