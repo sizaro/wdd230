@@ -42,7 +42,7 @@ body {
 }
 
 header {
-    background-color: blue;
+    background-color: #3f84c0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +121,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: #3f84c0;
     width: 100%;
     font-size: 20px;
     font-family: "Roboto";
@@ -192,7 +192,7 @@ ul {
 
 #footer {
     text-align: center;
-    background-color: blue;
+    background-color: #3f84c0;
 }
 
 .footer-content {
@@ -226,9 +226,9 @@ header .designHeader {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    border: 4px blue solid;
+    border: 4px #3f84c0 solid;
     background-color: green;
-    color: blue;
+    color: #3f84c0;
 
 }
 
@@ -276,7 +276,7 @@ header .designHeader {
     }
 
     header {
-        background-color: blue;
+        background-color: #3f84c0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -339,7 +339,7 @@ header .designHeader {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: blue;
+        background-color: #3f84c0;
         width: 100%;
         font-size: 20px;
         font-family: "Roboto";
@@ -408,7 +408,7 @@ header .designHeader {
 
     footer {
         text-align: center;
-        background-color: blue;
+        background-color: #3f84c0;
     }
 
     .footer-content {
@@ -442,9 +442,9 @@ header .designHeader {
         justify-content: center;
         align-items: center;
         gap: 20px;
-        border: 4px blue solid;
+        border: 4px #3f84c0 solid;
         background-color: green;
-        color: blue;
+        color: #3f84c0;
 
     }
 

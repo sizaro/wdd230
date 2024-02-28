@@ -63,15 +63,15 @@ document.addEventListener("DOMContentLoaded", () => {
             modeButton.textContent = "🌙";
         }
         else {
-            document.querySelector("header").style.backgroundColor = "blue";
+            document.querySelector("header").style.backgroundColor = "#3f84c0";
             document.querySelector("header").style.color = "#000";
-            document.querySelector("footer").style.backgroundColor = "blue";
+            document.querySelector("footer").style.backgroundColor = "#3f84c0";
             document.querySelector("footer").style.color = "white";
             document.querySelector(".nav").style.backgroundColor = "black"
             document.querySelector(".nav").style.color = "white";
-            document.querySelector(".cad").style.backgroundColor = "blue";
+            document.querySelector(".cad").style.backgroundColor = "#3f84c0";
             document.querySelector(".cad").style.color = "white";
-            document.querySelector(".cad1").style.backgroundColor = "blue";
+            document.querySelector(".cad1").style.backgroundColor = "#3f84c0";
             document.querySelector(".cad1").style.color = "white";
             modeButton.textContent = "🔆";
 
