@@ -36,32 +36,43 @@ humburgerIcon.addEventListener("click", () => {
 
 })
 
-let darkMode = document.querySelector("body");
-let darkModeButton = document.querySelector("#mode");
+document.addEventListener("DOMContentLoaded", function () {
+    let darkMode = document.querySelector("body");
+    let darkModeButton = document.querySelector("#mode");
 
-darkModeButton.addEventListener("click", () => {
-    darkMode.classList.toggle("dark-mode");
+    if (darkModeButton) {
+        darkModeButton.textContent = "🌞";
+    }
 
     if (darkMode.classList.contains("dark-mode")) {
-        document.querySelector("#mode").style.backgroundColor = "white"
-        document.querySelector(".joinButton").style.backgroundColor = "black";
-        document.querySelectorAll("section").forEach(section => {
-            section.style.backgroundColor = "black";
-            section.style.color = "white";
-        }
-        )
         darkModeButton.textContent = "🌙";
     }
-    else {
-        darkModeButton.style.setProperty('--before-content-mode', '');
-        document.querySelector(".joinButton").style.backgroundColor = "#3f84c0";
-        document.querySelectorAll("section").forEach(section => {
-            section.style.backgroundColor = "#3f84c0";
-            section.style.color = "white";
+
+    darkModeButton.addEventListener("click", () => {
+        darkMode.classList.toggle("dark-mode");
+
+        if (darkMode.classList.contains("dark-mode")) {
+            document.querySelector("#mode").style.backgroundColor = "white"
+            document.querySelector(".joinButton").style.backgroundColor = "black";
+            document.querySelectorAll("section").forEach(section => {
+                section.style.backgroundColor = "black";
+                section.style.color = "white";
+            }
+            )
+            darkModeButton.textContent = "🌙";
         }
-        )
-        darkModeButton.textContent = "🌞";
-        darkModeButton.textContent.style.backgroundColor = "black"
-    }
+        else {
+            darkModeButton.style.setProperty('--before-content-mode', '');
+            document.querySelector(".joinButton").style.backgroundColor = "#3f84c0";
+            document.querySelectorAll("section").forEach(section => {
+                section.style.backgroundColor = "#3f84c0";
+                section.style.color = "white";
+            }
+            )
+            darkModeButton.textContent = "🌞";
+            darkModeButton.textContent.style.backgroundColor = "black"
+        }
+
+    })
 
 })
