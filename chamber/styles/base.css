@@ -508,8 +508,9 @@ p#lastUpdated {
 
     #mode {
         position: absolute;
-        right: 80rem;
-        top: 1.9rem;
+        left: 530px;
+        top: 1.9px;
+        margin-left: 10px;
         font-size: 1.5rem;
         cursor: pointer;
         background-color: black;
