@@ -94,9 +94,10 @@ numberOfVisits++;
 localStorage.setItem("visits-num", numberOfVisits);
 
 
-if (numberOfVisits !== 1) {
-    paraDisplay.textContent = `Page visits: ${numberOfVisits}`;
+if (numberOfVisits === 0) {
+    paraDisplay.textContent = "This is your first visit";
 }
 else {
-    paraDisplay.textContent = "This is your first visit";
+    paraDisplay.textContent = `Page visits: ${numberOfVisits}`;
+
 }
