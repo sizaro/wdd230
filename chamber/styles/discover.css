@@ -5,6 +5,11 @@
     overflow-x: hidden;
 }
 
+html {
+    width: 500px;
+    overflow-x: hidden;
+}
+
 body {
 
     height: 100vh;
@@ -231,6 +236,7 @@ main {
 main img {
     width: 300px;
     height: auto;
+
 }
 
 main h2 {
@@ -283,13 +289,25 @@ footer p {
 }
 
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 45em) {
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     header {
         background-color: blue;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    header h1 {
+        position: absolute;
+        bottom: 300px;
+        font-size: 35px;
+        left: 750px;
     }
 
 
@@ -418,20 +436,18 @@ footer p {
         background-color: blue;
     }
 
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px;
-        margin-top: 10px;
-    }
-
 
     footer p {
         color: white;
         padding: 5px;
         font-family: "Playfair Display";
+    }
+
+    footer {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: -22px;
     }
 
     #lastModified {
@@ -585,11 +601,7 @@ footer p {
         text-align: center;
     }
 
-    footer {
-        width: 100%;
-        height: auto;
-        margin-bottom: -22px;
-    }
+
 
 
 
