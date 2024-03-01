@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".cad1").style.backgroundColor = "black";
             document.querySelector(".cad1").style.color = "white";
             document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector(".card2").style.color = "white";
+            document.querySelector("body").style.backgroundColor = "black";
 
             modeButton.textContent = "🌙";
         }
@@ -73,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".cad").style.color = "white";
             document.querySelector(".cad1").style.backgroundColor = "#3f84c0";
             document.querySelector(".cad1").style.color = "white";
+            document.querySelector(".card2").style.color = "black";
+            document.querySelector("body").style.backgroundColor = "white";
             modeButton.textContent = "🔆";
 
         }
@@ -90,7 +94,7 @@ numberOfVisits++;
 localStorage.setItem("visits-num", numberOfVisits);
 
 
-if (numberOfVisits > 0) {
+if (numberOfVisits !== 1) {
     paraDisplay.textContent = `Page visits: ${numberOfVisits}`;
 }
 else {
