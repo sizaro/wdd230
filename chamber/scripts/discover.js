@@ -28,6 +28,7 @@ localStorage.setItem("lastVisit", currentDate.getTime());
 
 if (lastVisit === 0) {
     visitDisplay.textContent = "Welcome! Let us know if you have any questions.";
+    document.querySelector(".pageVisit").style
 } else if (daysDifference === 0) {
     visitDisplay.textContent = "Back so soon! Awesome!";
 } else {

@@ -26,15 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let modeButton = document.querySelector("#mode");
     let darkBody = document.querySelector("body");
 
-
-    /*const modeButton = document.querySelector("#mode");
-    const darkBody = document.querySelector("body");
-    const header = document.querySelector(".header");
-    const footer = document.querySelector("#footer");
-    const nav = document.querySelector(".nav");
-    const cad = document.querySelector(".cad");
-    const cad1 = document.querySelector(".cad1");*/
-
     if (modeButton) {
         modeButton.textContent = "🔆";
     }
