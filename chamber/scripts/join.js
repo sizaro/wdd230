@@ -1,0 +1,1 @@
+document.getElementById('formDate').value = Date.now();

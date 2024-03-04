@@ -1,0 +1,22 @@
+* body {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+label {
+    display: block;
+}

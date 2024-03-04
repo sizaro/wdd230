@@ -1,0 +1,38 @@
+{
+    "familyName": "Bamutesiza",
+    "dateMovedIn": "24-10-2006",
+    "number": 6,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Rachael Bamutesiza",
+            "gender": "female",
+            "date": "26-12-1990"
+        },
+        {
+            "name": "Ritah Bamutesiza",
+            "gender": "female",
+            "date": "16-05-1992"
+        },
+        {
+            "name": "Ronald Bamutesiza",
+            "gender": "male",
+            "date": "14-04-1994"
+        },
+        {
+            "name": "Resty Bamutesiza",
+            "gender": "female",
+            "date": "04-01-1998"
+        },
+        {
+            "name": "Roben Bamutesiza",
+            "gender": "male",
+            "date": "13-11-2005"
+        },
+        {
+            "name": "Raymond Bamutesiza",
+            "gender": "male",
+            "date": "07-08-2007"
+        }
+    ]
+}
