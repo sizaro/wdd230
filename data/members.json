@@ -1,0 +1,147 @@
+{
+    "data": [
+        {
+            "companyName": "Beselflesss (U)",
+            "addresse": "Mukono Uganda",
+            "phoneNumber": "256771895506",
+            "specialization": "empowering students",
+            "membershipLevel": [
+                {
+                    "gold": "free access to all resources"
+                },
+                {
+                    "silver": "monthly access to the board"
+                },
+                {
+                    "platinum": "weekly information on programs"
+                }
+            ]
+        },
+        {
+            "companyName": "Google",
+            "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+            "phoneNumber": "+1 650-253-0000",
+            "specialization": "internet related products and services",
+            "websiteUrl": "https://www.google.com",
+            "membershipLevel": [
+                {
+                    "gold": "access to exclusive events"
+                },
+                {
+                    "silver": "priority access to new features"
+                },
+                {
+                    "platinum": "customised solutions"
+                }
+            ]
+        },
+        {
+            "companyName": "Tim Cook",
+            "addresse": "One Apple Park Way, Cupertino, CA 95014, USA",
+            "phoneNumber": "+1 408-996-1010",
+            "specialization": "designing, manufacturing and selling consumer electronic ",
+            "websiteUrl": "https://www.apple.com",
+            "membershipLevel": [
+                {
+                    "gold": "priority access to product launches"
+                },
+                {
+                    "silver": "discount on AppleCare+"
+                },
+                {
+                    "platinum": "Exclusive invitations to Apple Store events"
+                }
+            ]
+        },
+        {
+            "companyName": "Microsoft",
+            "addresse": "One Microsoft Way, Redmond, WA 98052-6399, USA",
+            "phoneNumber": "+1 425-882-8080",
+            "specialization": "development, licensing, supporting software products",
+            "websiteUrl": " https://www.microsoft.com",
+            "membershipLevel": [
+                {
+                    "gold": "ulimited access to Microsoft 365"
+                },
+                {
+                    "silver": "priority access to updates and patches"
+                },
+                {
+                    "platinum": "Quarterly business reviews with Microsoft executives"
+                }
+            ]
+        },
+        {
+            "companyName": "Amazon",
+            "addresse": "410 Terry Ave N, Seattle, WA 98109, USA",
+            "phoneNumber": "+1 206-266-1000",
+            "specialization": "e-commerce",
+            "websiteUrl": "https://www.amazon.com",
+            "membershipLevel": [
+                {
+                    "gold": "free two-day shipping on eligible products"
+                },
+                {
+                    "silver": "Discount rates on fresh Amazon items"
+                },
+                {
+                    "platinum": "Exclusive access to prime Day deals"
+                }
+            ]
+        },
+        {
+            "companyName": "Facebook",
+            "addresse": "1 Hacker Way, Menlo Park, CA 94025, USA",
+            "phoneNumber": "+1 650-543-4800",
+            "specialization": "Social networking services",
+            "websiteUrl": "https://www.facebook.com",
+            "membershipLevel": [
+                {
+                    "gold": "Ad credits for promoting business"
+                },
+                {
+                    "silver": "Access to Facebook Blueprint courses"
+                },
+                {
+                    "platinum": "Invitation to exclusive Facebook events and Workshops"
+                }
+            ]
+        },
+        {
+            "companyName": "Tesla",
+            "addresse": "3500 Deer Creek Road, Palo Alto, CA 94304, USA",
+            "phoneNumber": "+1 650-681-5000",
+            "specialization": "Electric Vehicles and energy storage solutions",
+            "websiteUrl": "https://www.tesla.com",
+            "membershipLevel": [
+                {
+                    "gold": "Priority Tesla updates for vehicle"
+                },
+                {
+                    "silver": "Discounts on Tesla accessories and services"
+                },
+                {
+                    "platinum": "VIP access to Tesla product launches"
+                }
+            ]
+        },
+        {
+            "companyName": "Netflix",
+            "addresse": "100 Winchester Circle, Los Gatos, CA 95032, USA",
+            "phoneNumber": "+1 408-540-3700",
+            "specialization": "Online streaming of movies and TV shows",
+            "websiteUrl": " https://www.netflix.com",
+            "membershipLevel": [
+                {
+                    "gold": "Unlimited streaming of movies and TV shows in HD"
+                },
+                {
+                    "silver": "Ad free experience without interuptions"
+                },
+                {
+                    "platinum": "Access to Netflix's highest-quality audio and video formats"
+                }
+            ]
+        }
+    ]
+}

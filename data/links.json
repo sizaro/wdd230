@@ -1,0 +1,94 @@
+{
+    "lessons": [
+        {
+            "lesson": "01",
+            "links": [
+                {
+                    "url": "lesson01/holygrail.html",
+                    "title": "Layout Principles in HTML and CSS"
+                }
+            ]
+        },
+        {
+            "lesson": "02",
+            "links": [
+                {
+                    "url": "lesson02/design-principles.html",
+                    "title": "Web Design Principles"
+                }
+            ]
+        },
+        {
+            "lesson": "03",
+            "links": [
+                {
+                    "url": "https://codepen.io/SPARTAN-SIZA/pen/abMVgQV",
+                    "title": "Responsive Menu Using Javascript"
+                }
+            ]
+        },
+        {
+            "lesson": "04",
+            "links": [
+                {
+                    "url": "https://codepen.io/SPARTAN-SIZA/pen/RwdMprB",
+                    "title": "Modifications to the style or content of page"
+                }
+            ]
+        },
+        {
+            "lesson": "05",
+            "links": [
+                {
+                    "url": "lesson05/bom.html",
+                    "title": "Building Applications updated automatically"
+                }
+            ]
+        },
+        {
+            "lesson": "06",
+            "links": [
+                {
+                    "url": "lesson03/images/landscape.webp",
+                    "title": "Compression with faster page loads"
+                }
+            ]
+        },
+        {
+            "lesson": "07",
+            "links": [
+                {
+                    "url": "lesson09/prophets.html",
+                    "title": "API Latter-Day Prophets Design"
+                }
+            ]
+        },
+        {
+            "lesson": "01",
+            "links": [
+                {
+                    "url": "lesson09/prophets.html",
+                    "title": "API Latter-Day Prophets Design"
+                }
+            ]
+        },
+        {
+            "lesson": "01",
+            "links": [
+                {
+                    "url": "lesson09/prophets.html",
+                    "title": "API Latter-Day Prophets Design"
+                }
+            ]
+        },
+        {
+            "lesson": "01",
+            "links": [
+                {
+                    "url": "lesson09/prophets.html",
+                    "title": "API Latter-Day Prophets Design"
+                }
+            ]
+        }
+    ]
+}
