@@ -1,17 +1,16 @@
 console.log("script loaded");
-const members = "data/members.json";
-const cards = document.querySelector("#cards");
+const membersUrl = "members.json";
 
-async function getMemberData(members) {
-    const response = await fetch(members);
+async function getMemberData(membersUrl) {
+    const response = await fetch(membersUrl);
     if (response.ok) {
-        const info = await response.json();
-        display(info.data);
+        const data = await response.json();
+        display(data.data);
     }
 }
 
-function display(information) {
-    information.forEach(info => {
+function display(response) {
+    response.forEach(info => {
         let card = document.querySelector("#cards");
         let section = document.createElement("section");
         let heading = document.createElement("h1");
@@ -30,7 +29,4 @@ function display(information) {
         heading.textContent = info.companyName
     });
 }
-
-
-
-display(members);
+getMemberData(membersUrl);

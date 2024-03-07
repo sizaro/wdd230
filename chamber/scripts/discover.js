@@ -33,5 +33,4 @@ if (lastVisit === 0) {
     visitDisplay.textContent = "Back so soon! Awesome!";
 } else {
     visitDisplay.textContent = `You last visited ${daysDifference} ${daysDifference === 1 ? 'day' : 'days'} ago.`;
-}
-
+};
