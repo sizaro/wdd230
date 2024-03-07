@@ -14,19 +14,42 @@ function display(response) {
         let card = document.querySelector("#cards");
         let section = document.createElement("section");
         let heading = document.createElement("h1");
-        let image = document.createElement("img");
+        let imageUrl = document.createElement("img");
         let paragraph1 = document.createElement("p");
         let paragraph2 = document.createElement("p");
         let paragraph3 = document.createElement("p");
         let paragraph4 = document.createElement("p");
         section.appendChild(heading);
-        section.appendChild(image);
+        section.appendChild(imageUrl);
         section.appendChild(paragraph1);
         section.appendChild(paragraph2);
         section.appendChild(paragraph3);
         section.appendChild(paragraph4);
         card.appendChild(section);
-        heading.textContent = info.companyName
+        heading.textContent = info.companyName;
+        imageUrl.scr = info.image;
+        imageUrl.width = "200";
+        imageUrl.height = "250";
+        paragraph1.textContent = info.address;
+        paragraph2.textContent = info.phoneNumber;
+        paragraph3.textContent = info.specialization;
+        paragraph4.textContent = info.membershipLevel.gold;
     });
 }
 getMemberData(membersUrl);
+addEventListener("DOMContentLoaded", () => {
+    toggleButton.classList.add("grid");
+})
+let gridStyle = document.querySelector("#grid");
+let listStyle = document.querySelector("#list");
+let toggleButton = document.querySelector("#cards");
+
+gridStyle.addEventListener("click", () => {
+    toggleButton.classList.add("grid");
+    toggleButton.classList.remove("list");
+})
+
+listStyle.addEventListener("click", () => {
+    toggleButton.classList.add("list");
+    toggleButton.classList.remove("grid");
+})

@@ -284,6 +284,57 @@ p#lastUpdated {
 
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    text-align: center;
+    margin: 0 8px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 0.25rem;
+    width: 400px;
+}
+
+
+.list p {
+    text-align: center;
+}
+
+
+.list section img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+}
+
+#cards p {
+    justify-self: center;
+    align-items: center;
+    color: #1d2012;
+    font-size: 20px;
+}
+
+#cards section {
+    border: 1px solid blueviolet;
+    background-color: gainsboro;
+    color: #1d2012;
+}
+
+
 @media screen and (min-width:300px) and (max-width:769px) {
 
     html {
