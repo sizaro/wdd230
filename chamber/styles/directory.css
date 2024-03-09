@@ -284,6 +284,7 @@ p#lastUpdated {
 
 }
 
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -292,32 +293,40 @@ p#lastUpdated {
     margin: 0 8px;
 }
 
+.grid section image {
+    display: block;
+}
+
 .list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 
 .list section {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
     padding: 0.25rem;
-    width: 400px;
+    border: 4px solid green;
+
 }
 
+.list section>* {
+    margin: 0 1rem;
+}
 
-.list p {
-    text-align: center;
+.list section:nth-child(even) {
+    background-color: #3f84c0;
+    color: #1d2012;
 }
 
 
 .list section img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
+    display: none;
 
 }
 
@@ -334,6 +343,35 @@ p#lastUpdated {
     color: #1d2012;
 }
 
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: azure;
+
+}
+
+.btn1 {
+    padding-right: 10px;
+}
+
+.btn2 {
+    padding-left: 10px;
+}
+
+#grid {
+    background-color: #1d2012;
+    color: #3f84c0;
+    font-size: 20px;
+}
+
+#list {
+    padding-left: 10px;
+    background-color: #1d2012;
+    color: #3f84c0;
+    font-size: 20px;
+}
 
 @media screen and (min-width:300px) and (max-width:769px) {
 
