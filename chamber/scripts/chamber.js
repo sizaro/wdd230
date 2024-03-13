@@ -1,3 +1,4 @@
+let weatherUrl = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}";
 let lastUpdated = document.getElementById("lastUpdated");
 lastUpdated.innerHTML = `Last Modified ${(document.lastModified)}`;
 let currentYear = document.getElementById("currentYear");
