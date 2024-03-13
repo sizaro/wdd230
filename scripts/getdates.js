@@ -80,7 +80,7 @@ let visitsDisplay = document.querySelector(".card2");
 let paraDisplay = document.createElement("p");
 visitsDisplay.appendChild(paraDisplay);
 let numberOfVisits = Number(localStorage.getItem("visits-num"));
-paraDisplay.style.textAlign = "center"
+paraDisplay.style.textAlign = "center";
 numberOfVisits++;
 localStorage.setItem("visits-num", numberOfVisits);
 
@@ -92,3 +92,44 @@ else {
     paraDisplay.textContent = `Page visits: ${numberOfVisits}`;
 
 }
+let weatherDisplay = document.querySelector(".card2");
+let weatherIcon = document.createElement("img");
+let weatherParagraph = document.createElement("p");
+let weatherCaption = document.createElement("figcaption");
+weatherDisplay.appendChild(weatherIcon)
+weatherDisplay.appendChild(weatherParagraph);
+weatherDisplay.appendChild(weatherCaption);
+const url = "https://api.openweathermap.org/data/2.5/weather?lat=49.74910228261849&lon=6.639794840803155&appid=a8e333ed4192014e741ddc0221962a26&units=imperial";
+
+async function apiFetch(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            data = await response.json();
+            displayResults(data)
+
+        }
+        else {
+            throw Error(await response.text());
+        }
+
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+function displayResults(data) {
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
+    weatherIcon.setAttribute("src", iconUrl);
+    weatherIcon.setAttribute("alt", data.weather[0].description);
+
+    const description = data.weather[0].description;
+    weatherParagraph.textContent = ` ${data.main.temp}& deg;F ${description} `;
+    /*weatherCaption.textContent = description;*/
+}
+
+
+apiFetch(url);
+
