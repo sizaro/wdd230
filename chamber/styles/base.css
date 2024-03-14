@@ -91,6 +91,11 @@ nav a {
 
 }
 
+section img {
+    width: 40px;
+    height: 45px;
+}
+
 .zoj :hover {
     border: 4px solid white;
     padding: 4px;
@@ -229,6 +234,7 @@ header button {
 }
 
 h2,
+h1,
 div,
 p {
     color: var(--headline-color-on-color);
@@ -294,19 +300,6 @@ p#lastUpdated {
     background-color: black;
 
 }
-
-/*
-div#humburger {
-    position: absolute;
-    text-decoration: none;
-    display: block;
-    font-size: 40px;
-    color: green;
-    left: 24rem;
-    bottom: 1rem;
-    cursor: pointer;
-    z-index: 999;
-}*/
 
 @media screen and (min-width:300px) and (max-width:769px) {
 
