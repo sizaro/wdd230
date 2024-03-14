@@ -74,7 +74,7 @@ header {
     width: 80%;
 }
 
-header h2 {
+header h1 {
     color: #ebedef;
 }
 
@@ -471,10 +471,20 @@ main h2 {
         padding-bottom: 10px;
     }
 
+}
 
+@media screen and (min-width: 62em) {
+    html {
+        width: 100%;
+    }
 
+    *body {
+        box-sizing: border-box;
 
+    }
 
-
-
+    .main-container img:hover {
+        box-shadow: 0 0 30px burlywood;
+        transform: scaleX(-1);
+    }
 }
