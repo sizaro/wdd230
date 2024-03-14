@@ -1,4 +1,4 @@
-let weatherUrl = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}";
+
 let lastUpdated = document.getElementById("lastUpdated");
 lastUpdated.innerHTML = `Last Modified ${(document.lastModified)}`;
 let currentYear = document.getElementById("currentYear");
@@ -29,12 +29,29 @@ speedInput.addEventListener('input', updateWindChill);
 
 updateWindChill();
 
-const humburgerIcon = document.querySelector("#humburger");
-const menuIcon = document.querySelector(".navigation");
-humburgerIcon.addEventListener("click", () => {
-    humburgerIcon.classList.toggle("show");
-    menuIcon.classList.toggle("show");
+document.addEventListener("DOMContentLoaded", function () {
+    let humburgerNav = document.querySelector("nav");
+    humburgerNav.classList.add("humburger")
+    let humburgerButton = document.querySelector("#humburger");
+    if (humburgerNav.classList.contains("humburger")) {
+        humburgerButton.textContent = "☰";
+    }
+    if (humburgerNav.classList.contains("show")) {
+        humburgerButton.textContent = "×";
+    }
+    humburgerButton.addEventListener("click", () => {
+        if (humburgerNav.classList.contains("humburger")) {
+            humburgerNav.classList.remove("humburger");
+            humburgerNav.classList.add("show");
+            humburgerButton.textContent = "×";
+        }
 
+        else {
+            humburgerNav.classList.add("humburger");
+            humburgerNav.classList.remove("show");
+            humburgerButton.textContent = "☰";
+        }
+    })
 })
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -79,3 +96,30 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 })
+const weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=0.4473554745677121&lon=33.20333743252407&appid=a8e333ed4192014e741ddc0221962a26";
+let weatherForecast = document.querySelector(".weatherForecast");
+let tempNow = document.querySelector("#currentTempValue");
+let weatherNowDesc = document.querySelector("#weatherDescription");
+let imageicon = document.createElement("img");
+weatherForecast.appendChild(imageicon);
+
+async function apiweatherFetch(url) {
+    let response = await fetch(url);
+    if (response.ok) {
+        let data = await response.json();
+        displayweatherNow(data);
+    }
+}
+
+function displayweatherNow(data) {
+    const tempNowValue = data.list[0].main.temp;
+    const descriptionNow = data.list[0].weather[0].description;
+    const iconCode = data.list[0].weather[0].icon;
+    const iconid = `https://openweathermap.org/img/w/${iconCode}.png`;
+    tempNow.textContent = tempNowValue;
+    weatherNowDesc.textContent = descriptionNow;
+    imageicon.src = iconid;
+}
+
+apiweatherFetch(weatherUrl);
+

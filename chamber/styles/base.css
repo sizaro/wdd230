@@ -211,6 +211,10 @@ h1 {
     text-decoration: none;
 }
 
+header button {
+    display: "hidden";
+}
+
 .text-overlay::before {
     position: absolute;
     content: "large";
@@ -291,6 +295,19 @@ p#lastUpdated {
 
 }
 
+/*
+div#humburger {
+    position: absolute;
+    text-decoration: none;
+    display: block;
+    font-size: 40px;
+    color: green;
+    left: 24rem;
+    bottom: 1rem;
+    cursor: pointer;
+    z-index: 999;
+}*/
+
 @media screen and (min-width:300px) and (max-width:769px) {
 
     html {
@@ -357,28 +374,44 @@ p#lastUpdated {
         text-decoration: none;
     }
 
-    nav {
-        display: none;
-    }
 
-    header a::before {
+    nav.humburger {
         position: absolute;
-        content: "☰";
         text-decoration: none;
-        font-size: 30px;
-        color: white;
-        right: 10px;
-        bottom: 40px;
+        display: none;
         cursor: pointer;
     }
 
-    header a.show::before {
+    /*div#humburger {
         position: absolute;
-        content: "×";
         text-decoration: none;
-        font-size: 50px;
+        display: block;
+        font-size: 40px;
+        color: green;
+        left: 12rem;
+        bottom: 15rem;
+        cursor: pointer;
+        z-index: 999;
+    }*/
+
+    nav.show {
+        display: block;
+        top: 1rem;
+        text-decoration: none;
         color: white;
         bottom: 29px;
+    }
+
+    div#humburger {
+        position: absolute;
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        color: green;
+        left: 24rem;
+        bottom: 1rem;
+        cursor: pointer;
+        z-index: 999;
     }
 
 
@@ -481,7 +514,7 @@ p#lastUpdated {
 
     .container {
         display: grid;
-        grid-template: 1fr 1fr/1fr;
+        grid-template: 1fr 1fr 1fr/1fr;
         justify-content: center;
         align-items: center;
         gap: 5px;
@@ -497,6 +530,14 @@ p#lastUpdated {
         grid-column: 1/2;
         grid-row: 2/3;
     }
+
+    .weatherForecast {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        height: 100%;
+    }
+
+
 
     footer {
         display: flex;
@@ -593,26 +634,6 @@ p#lastUpdated {
 
     nav {
         display: none;
-    }
-
-    header a::before {
-        position: absolute;
-        content: "☰";
-        text-decoration: none;
-        font-size: 30px;
-        color: white;
-        right: 10px;
-        bottom: 40px;
-        cursor: pointer;
-    }
-
-    header a.show::before {
-        position: absolute;
-        content: "×";
-        text-decoration: none;
-        font-size: 50px;
-        color: white;
-        bottom: 29px;
     }
 
 
@@ -755,5 +776,32 @@ p#lastUpdated {
         cursor: pointer;
         background-color: black;
 
+    }
+
+    nav.humburger {
+        position: absolute;
+        text-decoration: none;
+        display: none;
+        cursor: pointer;
+    }
+
+    /*div#humburger {
+        position: absolute;
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        color: green;
+        left: 34rem;
+        bottom: 1rem;
+        cursor: pointer;
+        z-index: 999;
+    }*/
+
+    nav.show {
+        display: block;
+        top: 1rem;
+        text-decoration: none;
+        color: white;
+        bottom: 29px;
     }
 }
