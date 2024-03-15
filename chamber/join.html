@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
     <title>Join Chamber of Commerce </title>
     <meta name="author" content="Ronald Bamutesiza">
-    <meta name="description" content="Welcome This is the official page for Joining the chamber of commerce of Zion of Jinja Chamber of Commerce >
-    <meta property=" og:title" content="Zion Of Jinja Chamber Of Commerce">
+    <meta name="description"
+        content="Welcome This is the official page for Joining the chamber of commerce of Zion of Jinja Chamber of Commerce">
+    <meta property="og:title" content="Zion Of Jinja Chamber Of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="chamber/images/jinja-city.jpeg">
     <meta property="og:url" content="">
@@ -42,57 +43,58 @@
 
         </div>
     </header>
-    <h1>Membership Application Form</h1>
-    <form action="thankyou.html" method="get">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br>
+    <div class="form">
+        <h1>Membership Application Form</h1>
+        <form action="thankyou.html" method="get">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
 
-        <label for="position">Position within Organization:</label>
-        <input type="text" id="position" name="position" required pattern="[a-zA-Z\s-]{7,}"><br>
+            <label for="position">Position within Organization:</label>
+            <input type="text" id="position" name="position" required pattern="[a-zA-Z\s-]{7,}"><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="example@example.com"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="example@example.com"><br>
 
-        <label for="phone">Mobile Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required><br>
+            <label for="phone">Mobile Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
 
-        <label for="organization">Organization Name:</label>
-        <input type="text" id="organization" name="organization" required><br>
+            <label for="organization">Organization Name:</label>
+            <input type="text" id="organization" name="organization" required><br>
 
-        <label>Membership Level:</label><br>
-        <input type="radio" id="NP" name="membership" value="NP" required>
-        <label for="NP">NP Membership (Free)</label><br>
+            <label>Membership Level:</label><br>
+            <input type="radio" id="NP" name="membership" value="NP" required>
+            <label for="NP">NP Membership (Free)</label><br>
 
-        <input type="radio" id="Bronze" name="membership" value="Bronze" required>
-        <label for="Bronze">Bronze Membership</label><br>
+            <input type="radio" id="Bronze" name="membership" value="Bronze" required>
+            <label for="Bronze">Bronze Membership</label><br>
 
-        <input type="radio" id="Silver" name="membership" value="Silver" required>
-        <label for="Silver">Silver Membership</label><br>
+            <input type="radio" id="Silver" name="membership" value="Silver" required>
+            <label for="Silver">Silver Membership</label><br>
 
-        <input type="radio" id="Gold" name="membership" value="Gold" required>
-        <label for="Gold">Gold Membership</label><br>
+            <input type="radio" id="Gold" name="membership" value="Gold" required>
+            <label for="Gold">Gold Membership</label><br>
 
-        <label for="description">Organization Description:</label><br>
-        <textarea id="description" name="description"></textarea><br>
+            <label for="description">Organization Description:</label><br>
+            <textarea id="description" name="description"></textarea><br>
 
-        <input type="hidden" id="formDate" name="formDate">
+            <input type="hidden" id="formDate" name="formDate">
 
-        <button type="submit">Submit Application</button>
-    </form>
+            <button type="submit">Submit Application</button>
+        </form>
 
-    <aside>
-        <h2>Membership Benefits</h2>
-        <ul>
-            <li>NP Membership: No fee, basic benefits</li>
-            <li>Bronze Membership: Increased benefits</li>
-            <li>Silver Membership: More benefits</li>
-            <li>Gold Membership: Highest level of benefits</li>
-        </ul>
-    </aside>
-
+        <aside>
+            <h2>Membership Benefits</h2>
+            <ul>
+                <li>NP Membership: No fee, basic benefits</li>
+                <li>Bronze Membership: Increased benefits</li>
+                <li>Silver Membership: More benefits</li>
+                <li>Gold Membership: Highest level of benefits</li>
+            </ul>
+        </aside>
+    </div>
     <script src="scripts/join.js">
     </script>
 </body>
