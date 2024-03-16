@@ -71,7 +71,7 @@ header nav li:hover {
 
 
 .navigation {
-    margin-left: 20spx;
+    margin-left: 20px;
 }
 
 nav a {
@@ -217,7 +217,7 @@ h1 {
 }
 
 header button {
-    display: "hidden";
+    display: none;
 }
 
 .text-overlay::before {
@@ -312,7 +312,7 @@ p#lastUpdated {
 
     * body {
         box-sizing: border-box;
-        max-width: 100vhs;
+        max-width: 100%;
     }
 
     body {
@@ -322,14 +322,12 @@ p#lastUpdated {
         align-items: center;
         max-width: 100%;
         margin: 0 20px;
-        overflow-wrap: wrap;
         padding: 0 10px;
     }
 
     header {
         position: relative;
         display: block;
-        columns: var(--headline-color-on-white);
 
     }
 
@@ -580,14 +578,12 @@ p#lastUpdated {
         align-items: center;
         max-width: 100%;
         margin: 0 20px;
-        overflow-wrap: wrap;
         padding: 0 10px;
     }
 
     header {
         position: relative;
         display: block;
-        columns: var(--headline-color-on-white);
 
     }
 
