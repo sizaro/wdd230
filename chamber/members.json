@@ -5,7 +5,7 @@
             "address": "Mukono, central region, lubogo road, block 5 Uganda",
             "phoneNumber": "256771895506",
             "specialization": "empowering students",
-            "imageUrl": "chamber/images/flag.webp",
+            "imageUrl": "https://sizaro.github.io/wdd230/chamber/images/flag.webp",
             "membershipLevel": [
                 {
                     "gold": "free access to all resources"

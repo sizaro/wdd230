@@ -64,14 +64,15 @@ body {
     z-index: 1;
 }
 
-#logoimg {
-    text-align: justify;
-}
-
 
 header {
     display: block;
     width: 80%;
+}
+
+header img {
+    width: 60px;
+    height: auto;
 }
 
 header h1 {

@@ -44,11 +44,11 @@
 }
 
 html {
-    background-color: white;
+    background-color: var(--accent3-color);
 }
 
 body {
-    background-color: white;
+    background-color: var(--headline-color-on-white);
     overflow-x: hidden;
     margin: 0 10px;
 }
@@ -64,29 +64,14 @@ header {
 
 header nav li:hover {
     text-decoration: underline;
-    list-style-type: none;
     color: blue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
 }
 
-header img {
-    width: 60px;
-    height: auto;
-}
-
 
 .navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.navigation li {
-    padding: 0 10px;
-    margin: 0 2px;
+    margin-left: 20spx;
 }
 
 nav a {
@@ -106,6 +91,87 @@ nav a {
 
 }
 
+#mode {
+    position: absolute;
+    left: 80rem;
+    top: 0.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: black;
+
+}
+
+h1,
+h2,
+p {
+    color: var(--headline-color-on-color);
+
+}
+
+
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: right 5px;
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: right 5px;
+    font-size: 1rem;
+
+}
+
+img {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.navigation li {
+    list-style: none;
+    padding: 0 10px;
+    margin: 0 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.zoj {
+    margin-top: 2px;
+    margin-left: -300px;
+    color: white;
+    text-align: center;
+    width: 500px;
+    font-size: larger;
+
+}
+
 .zoj :hover {
     border: 4px solid white;
     padding: 4px;
@@ -113,84 +179,4 @@ nav a {
 
 .zoj a {
     text-decoration: none;
-}
-
-h1 {
-    color: var(--headline-color-on-color);
-}
-
-
-h2,
-div,
-p,
-label,
-li {
-    color: var(--headline-color-on-white);
-}
-
-label {
-    font-size: 1.1rem;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    margin: 0 auto;
-    background-color: var(--accent3-color);
-}
-
-.form h1,
-h2 {
-    font-size: 1.5rem;
-    color: var(--headline-color-on-white);
-}
-
-input:invalid {
-    background-color: white;
-}
-
-input:valid {
-    color: white;
-    background-color: green;
-}
-
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="tel"],
-.form input[type="password"],
-.form textarea,
-.form button {
-    min-width: 250px;
-    width: auto;
-}
-
-
-
-.form button[type="submit"]:hover {
-    background-color: var(--accent2-color);
-    color: var(--accent3-color);
-    height: 40px;
-    font-size: 1.2rem;
-}
-
-
-footer {
-    display: flex;
-    text-align: center;
-    background-color: var(--headline-color-on-white);
-    width: 100%;
-
-}
-
-footer p {
-    color: var(--headline-color-on-color);
-    margin-left: 400px;
-}
-
-p#lastUpdated {
-    margin-left: 10px;
-
 }

@@ -778,17 +778,15 @@ p#lastUpdated {
         cursor: pointer;
     }
 
-    /*div#humburger {
+    div#humburger {
         position: absolute;
         text-decoration: none;
-        display: block;
-        font-size: 40px;
-        color: green;
-        left: 34rem;
+        display: none;
+        color: black;
         bottom: 1rem;
         cursor: pointer;
         z-index: 999;
-    }*/
+    }
 
     nav.show {
         display: block;

@@ -217,10 +217,14 @@ h1 {
     color: var(--accent2-color);
 }
 
-h2,
+
 div,
 p {
     color: var(--headline-color-on-color);
+}
+
+header h1 {
+    color: #ebedef;
 }
 
 .hero {
