@@ -103,7 +103,7 @@ function display(response) {
         section.appendChild(paragraph4);
         card.appendChild(section);
         heading.textContent = info.companyName;
-        portrait.scr = info.imageUrl;
+        portrait.src = info.imageUrl;
         portrait.width = "100";
         portrait.height = "150";
         portrait.loading = "lazy";
