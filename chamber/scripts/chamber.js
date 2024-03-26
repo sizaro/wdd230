@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             )
             darkModeButton.textContent = "🌞";
-            darkModeButton.style.backgroundColor = "white";
+            darkModeButton.style.backgroundColor = "black";
 
         }
 

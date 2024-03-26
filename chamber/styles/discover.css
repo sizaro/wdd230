@@ -66,12 +66,14 @@ div#mode {
     margin-right: 30px;
     cursor: pointer;
     font-size: 2rem;
+    background-color: #1d2012;
 }
 
 div#humburger {
     margin-top: -50px;
     margin-right: -39px;
     display: none;
+    color: #ebedef;
 }
 
 header nav ul {
@@ -104,6 +106,7 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(100, 211, 255, 0.2);
 
 }
 
@@ -117,6 +120,7 @@ header img {
 
 .zionhero h1 {
     margin-right: 180px;
+    color: #ebedef;
 }
 
 header h1:hover {
@@ -193,22 +197,160 @@ section img {
 }
 
 
+section img:hover {
+    transform: rotateY(150deg);
+}
+
+
 footer {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding-right: 15px;
-    margin-left: 400px;
+    background-color: #1d2012;
+    color: #ebedef;
 }
 
 footer p {
     color: #1d2012;
+    font-size: 1.1rem;
+    color: var(--accent3-color);
 }
 
 p#lastUpdated {
-    margin-left: 10px;
+    margin-left: 15px;
+    font-size: 1.1rem;
+    color: var(--accent3-color);
 
 }
 
 footer img {
     width: 40px;
+    margin: 0 5px;
+}
+
+
+@media screen and (min-width:300px) and (max-width:769px) {
+
+    *Body {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    body {
+        margin: 0 1px;
+    }
+
+    div#mode {
+        margin-right: 5px;
+        font-size: 1.5rem;
+    }
+
+    div#humburger {
+        display: block;
+        margin-top: -70px;
+        margin-right: -49px;
+        font-size: 1.5rem;
+    }
+
+    div.zionhero {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    header nav {
+        margin-left: 0;
+    }
+
+    header img {
+        margin-right: 20px;
+        position: relative;
+        width: 60px;
+        height: 100%;
+    }
+
+    .zionhero h1 {
+        margin-right: 20px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    img {
+        width: 20px;
+        height: 30px;
+    }
+
+    section img {
+        width: 350px;
+        height: auto;
+        margin-top: 6px;
+        text-align: center;
+
+    }
+
+    section img:hover {
+        transform: rotateY(150deg);
+    }
+
+    nav.humburger {
+        position: absolute;
+        text-decoration: none;
+        display: none;
+        cursor: pointer;
+    }
+
+    /*div#humburger {
+        position: absolute;
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        color: green;
+        left: 12rem;
+        bottom: 15rem;
+        cursor: pointer;
+        z-index: 999;
+    }*/
+
+    nav.show {
+        display: block;
+        top: 1rem;
+        text-decoration: none;
+        color: black;
+        bottom: 29px;
+    }
+
+
+    header ul.show {
+        display: block;
+    }
+
+
+    .navigation li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding-left: 4px;
+        z-index: 999;
+    }
 }

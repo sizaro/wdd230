@@ -21,7 +21,7 @@ if (lastVisit === 0) {
     visitDisplay.textContent = `You last visited ${daysDifference} ${daysDifference === 1 ? 'day' : 'days'} ago.`;
 };
 
-let lastUpdated = document.getElementById("lastUpdated");
+let lastUpdated = document.getElementById("lastModified");
 lastUpdated.innerHTML = `Last Modified ${(document.lastModified)}`;
 let currentYear = document.getElementById("currentYear");
 currentYear.textContent = "2024";
@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (darkMode.classList.contains("dark-mode")) {
             document.querySelector("#mode").style.backgroundColor = "white"
-            document.querySelector(".joinButton").style.backgroundColor = "black";
             document.querySelectorAll("section").forEach(section => {
                 section.style.backgroundColor = "black";
                 section.style.color = "white";

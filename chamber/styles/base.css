@@ -105,7 +105,12 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(100, 211, 255, 0.2);
 
+}
+
+.navigation a:not(4) {
+    color: white;
 }
 
 header img {
@@ -117,6 +122,7 @@ header img {
 }
 
 .zionhero h1 {
+    color: var(--headline-color-on-color);
     margin-right: 180px;
 }
 
@@ -353,16 +359,20 @@ p#lastUpdated {
         margin: 0 auto;
     }
 
+    header nav {
+        margin-left: 0;
+    }
+
     header img {
-        margin-right: 40px;
+        margin-right: 20px;
         position: relative;
         width: 60px;
         height: 100%;
     }
 
     .zionhero h1 {
-        margin-right: 40px;
-        font-size: 1.5rem;
+        margin-right: 20px;
+        font-size: 1.2rem;
         text-decoration: none;
         text-align: center;
     }
@@ -406,6 +416,9 @@ p#lastUpdated {
 
 
     .navigation li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         list-style: none;
         padding-left: 4px;
         z-index: 999;

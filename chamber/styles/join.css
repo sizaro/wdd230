@@ -83,11 +83,13 @@ header nav ul {
     gap: 20px;
     width: 100%;
     height: 100%;
+
 }
 
 header nav ul li {
     text-decoration: none;
     margin: 0 40px;
+    padding: 0 1rem;
 }
 
 header nav ul li a {
@@ -104,6 +106,7 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(100, 211, 255, 0.2);
 
 }
 
@@ -132,14 +135,23 @@ header h1:hover {
 
 footer {
     display: flex;
+    justify-content: center;
     text-align: center;
-    padding-right: 15px;
-    margin-left: 400px;
+
+    background-color: var(--headline-color-on-white);
+    width: 100%;
 }
 
 p#lastUpdated {
-    margin-left: 10px;
+    margin-left: 1px;
+    font-size: 1.1rem;
 
+}
+
+footer p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--headline-color-on-color);
 }
 
 
@@ -218,24 +230,6 @@ input:valid {
 
 
 
-footer {
-    display: flex;
-    text-align: center;
-    background-color: var(--headline-color-on-white);
-    width: 100%;
-
-}
-
-footer p {
-    color: var(--headline-color-on-color);
-    margin-left: 400px;
-}
-
-p#lastUpdated {
-    margin-left: 10px;
-
-}
-
 /*
 h2,
 div,
@@ -295,4 +289,121 @@ footer p {
 p#lastUpdated {
     margin-left: 10px;
 
+}
+*/
+
+
+@media screen and (min-width:300px) and (max-width:769px) {
+
+    *Body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    body {
+        margin: 0 1px;
+        overflow-x: hidden;
+    }
+
+    div#mode {
+        margin-right: 5px;
+        font-size: 1.5rem;
+    }
+
+    div#humburger {
+        display: block;
+        margin-top: -70px;
+        margin-right: -49px;
+        font-size: 1.5rem;
+        color: var(--accent3-color);
+    }
+
+    div.zionhero {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-left: 25%;
+    }
+
+
+    header img {
+        margin-right: 40px;
+        position: relative;
+        width: 60px;
+        height: 100%;
+    }
+
+    .zionhero h1 {
+        margin-right: 40px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    img {
+        width: 20px;
+        height: 30px;
+    }
+
+    nav.humburger {
+        position: absolute;
+        text-decoration: none;
+        display: none;
+        cursor: pointer;
+    }
+
+    /*div#humburger {
+        position: absolute;
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        color: green;
+        left: 12rem;
+        bottom: 15rem;
+        cursor: pointer;
+        z-index: 999;
+    }*/
+
+    nav.show {
+        display: block;
+        margin-left: 30%;
+        top: 1rem;
+        text-decoration: none;
+        color: black;
+        bottom: 29px;
+        margin-left: 0px;
+    }
+
+    nav.show:hover {
+        color: #ebedef;
+    }
+
+
+    header ul.show {
+
+        margin: 0 auto;
+    }
+
+
+    .navigation li {
+        list-style: none;
+        padding-left: 4px;
+        z-index: 999;
+    }
 }

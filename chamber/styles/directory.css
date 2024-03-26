@@ -105,6 +105,7 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(100, 211, 255, 0.2);
 
 }
 
@@ -258,6 +259,7 @@ p#lastUpdated {
         margin-top: -70px;
         margin-right: -49px;
         font-size: 1.5rem;
+        color: #ebedef;
     }
 
     div.zionhero {
@@ -270,6 +272,7 @@ p#lastUpdated {
 
     header nav ul li {
         margin: 0 5px;
+        margin-left: 25%;
     }
 
     header nav ul {
@@ -277,6 +280,11 @@ p#lastUpdated {
         display: block;
         max-width: 100%;
         margin: 0 auto;
+
+    }
+
+    header nav {
+        margin-left: 0;
     }
 
     header img {
