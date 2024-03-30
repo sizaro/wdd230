@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 })
-const weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=0.4473554745677121&lon=33.20333743252407&appid=a8e333ed4192014e741ddc0221962a26";
+const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=0.4475271339059875&lon=33.20316576377895&appid=1b38869f1c347522d45b8c33cd852ef5";
 let weatherForecast = document.querySelector(".weatherForecast");
 let tempNow = document.querySelector("#currentTempValue");
 let weatherNowDesc = document.querySelector("#weatherDescription");
@@ -110,16 +110,76 @@ async function apiweatherFetch(url) {
         displayweatherNow(data);
     }
 }
+async function forecastApiweatherFetch(url) {
+    let response = await fetch(url);
+    if (response.ok) {
+        let data = await response.json();
+        displayweatherForecast(data)
+    }
+}
 
 function displayweatherNow(data) {
-    const tempNowValue = data.list[0].main.temp;
-    const descriptionNow = data.list[0].weather[0].description;
-    const iconCode = data.list[0].weather[0].icon;
+    const tempNowValue = data.main.temp;
+    const descriptionNow = data.weather[0].description;
+    const iconCode = data.weather[0].icon;
     const iconid = `https://openweathermap.org/img/w/${iconCode}.png`;
     tempNow.textContent = tempNowValue;
     weatherNowDesc.textContent = descriptionNow;
     imageicon.src = iconid;
+
+}
+const weatherForecastUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=0.4475271339059875&lon=33.20316576377895&appid=1b38869f1c347522d45b8c33cd852ef5";
+function displayweatherForecast(data) {
+    data.list.forEach(weatherinfo => {
+        const timeStamp = weatherinfo.dt;
+        const date = new Date(timeStamp * 1000);
+        const hour = date.getHours();
+        const dayOfweek = date.getDay();
+        if (hour === 15 && dayOfweek === 1) {
+            const monday = document.querySelector(".monday");
+            const para1day = document.createElement("p");
+            const para2day = document.createElement("p");
+            para1day.textContent = `The temp is ${weatherinfo.main.temp}`;
+            para2day.textContent = `It is ${weatherinfo.weather[0].description}`;
+            const forecastIconCode = weatherinfo.weather[0].icon;
+            const forecastIconid = `https://openweathermap.org/img/w/${forecastIconCode}.png`
+            forecastImage.src = forecastIconid;
+            forecastImage.style.width = "100";
+            forecastImage.style.height = "100";
+            monday.appendChild(para1day);
+            monday.appendChild(para2day);
+            monday.appendChild(forecastImage);
+        }
+        if (hour === 15 && dayOfweek === 2) {
+            let monday = document.querySelector(".tuesday");
+            let para1day = document.createElement("p");
+            let para2day = document.createElement("p");
+            para1day.textContent = weatherinfo.main.temp;
+            para2day.textContent = weatherinfo.weather[0].description;
+            const forecastIconCode = weatherinfo.weather[0].icon;
+            const forecastIconid = `https://openweathermap.org/img/w/${forecastIconCode}.png`
+            forecastImage.src = forecastIconid;
+            monday.appendChild(para1day);
+            monday.appendChild(para2day);
+            monday.appendChild(forecastImage);
+        }
+        if (hour === 15 && dayOfweek === 3) {
+            let monday = document.querySelector(".wednesday");
+            let para1day = document.createElement("p");
+            let para2day = document.createElement("p");
+            para1day.textContent = weatherinfo.main.temp;
+            para2day.textContent = weatherinfo.weather[0].description;
+            const forecastIconCode = weatherinfo.weather[0].icon;
+            const forecastIconid = `https://openweathermap.org/img/w/${forecastIconCode}.png`
+            forecastImage.src = forecastIconid;
+            monday.appendChild(para1day);
+            monday.appendChild(para2day);
+            monday.appendChild(forecastImage);
+        }
+
+    });
 }
 
 apiweatherFetch(weatherUrl);
+forecastApiweatherFetch(weatherForecastUrl);
 
