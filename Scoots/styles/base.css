@@ -1,0 +1,221 @@
+@media screen and (max-width:699px) {
+    :root {
+        --animation-direction: alternate;
+    }
+
+    *body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 10px;
+        overflow-x: hidden;
+    }
+
+    .reserve {
+        left: 2rem;
+        position: absolute;
+        bottom: 16rem;
+
+    }
+
+    .reserve button {
+        color: black;
+        background-color: aliceblue;
+        width: 6rem;
+        height: 2rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 8rem;
+        margin-bottom: 1rem;
+        margin-top: -2rem;
+    }
+
+    .logoimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        margin-left: 1px;
+        width: 10px;
+        height: 15px;
+    }
+
+    .logoimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    #mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        display: block;
+        text-decoration: none;
+    }
+
+    nav {
+        display: block;
+        height: 1rem;
+    }
+}
+
+@media screen and (min-width:700px) {
+    *body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 10px;
+    }
+
+    #heroContainer {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .heroImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .heroImage img {
+        width: 100%;
+        height: auto;
+    }
+
+    .reserve {
+        position: absolute;
+        left: 10rem;
+        top: 18rem;
+
+    }
+
+    .reserve button {
+        color: black;
+        background-color: aliceblue;
+        width: 8rem;
+        height: 2rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 3rem;
+    }
+
+    .logoimg {
+        display: flex;
+        margin-right: 10%;
+        margin-left: 5px;
+        width: 20px;
+        height: 25px;
+    }
+
+    .logoimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    #mode {
+        display: flex;
+        margin-left: 10%;
+        margin-right: 5px;
+        width: 20px;
+        height: 25px;
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        padding: 0 3rem;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .imageContent {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin: 0 10px;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .imageContent img {
+        width: 250px;
+        height: auto;
+    }
+
+    .images {
+        background-color: aquamarine;
+    }
+
+    .rentalTypes {
+        background-color: greenyellow;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .updated {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .contactIcons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .weatherInformation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .weatherInformation p {
+        padding: 0 10px;
+    }
+
+
+
+}
