@@ -77,6 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.style.color = "white";
             }
             )
+            document.querySelector(".forecastedWeather").style.backgroundColor = "black";
+            document.querySelector(".forecastedWeather").style.color = "white";
+
+            document.querySelector(".daycontainer").style.backgroundColor = "black";
+            document.querySelector(".daycontainer").style.color = "white";
+
+            document.querySelector("header").style.backgroundColor = "black";
+            document.querySelector("header").style.color = "white";
+
+            document.querySelector(".nav").style.backgroundColor = "black";
+            document.querySelector(".nav").style.color = "white";
+
+
             darkModeButton.textContent = "🌙";
             darkModeButton.style.backgroundColor = "black";
         }
@@ -88,6 +101,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.style.color = "white";
             }
             )
+            document.querySelector(".forecastedWeather").style.backgroundColor = "#3f84c0";
+            document.querySelector(".forecastedWeather").style.color = "white";
+
+            document.querySelector(".daycontainer").style.backgroundColor = "#3f84c0";
+            document.querySelector(".daycontainer").style.color = "white";
+
+            document.querySelector("header").style.backgroundColor = "#3f84c0";
+            document.querySelector("header").style.color = "white";
+
+            document.querySelector(".nav").style.backgroundColor = "rgba(100, 211, 255, 0.2)";
+            document.querySelector(".nav").style.color = "white";
+
             darkModeButton.textContent = "🌞";
             darkModeButton.style.backgroundColor = "black";
 

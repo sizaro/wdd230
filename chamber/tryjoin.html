@@ -4,107 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="styles/tryjoin.css">
-    <title>Join Chamber of Commerce </title>
-    <meta name="author" content="Ronald Bamutesiza">
-    <meta name="description"
-        content="Welcome This is the official page for Joining the chamber of commerce of Zion of Jinja Chamber of Commerce">
-    <meta property="og:title" content="Zion Of Jinja Chamber Of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="chamber/images/jinja-city.jpeg">
-    <meta property="og:url" content="">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
-    <header>
-        <div id="logoimg"><img src="zojeclogo.webp" class="logoimg" alt="zoj-logo"> <span id="chamber">
-            </span></div>
-        <div class="zoj">
-            <a href="">
-                <h1>Zion of Jinja Chamber of Commerce</h1>
-            </a>
+    <section class="forecastedWeather">
+        <div class="daycontainer">
         </div>
-        <nav class="nav">
-            <ul class="navigation">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="discover.html">DISCOVER</a></li>
-                <li><a href="directory.html">DIRECTORY</a></li>
-                <li><a href="join.html">JOIN</a></li>
-            </ul>
-        </nav>
-        <div>
-            <a href="" id="humburger"></a>
-        </div>
-        <div id="mode">
-
-        </div>
-    </header>
-    <main>
-        <h1>Membership Application Form</h1>
-        <div class="form-content">
-            <div id="form1">
-                <form action="thankyou.html" method="get">
-                    <label for="firstName">First Name:</label><br>
-                    <input type="text" id="firstName" name="firstName" required><br>
-
-                    <label for="lastName">Last Name:</label><br>
-                    <input type="text" id="lastName" name="lastName" required><br>
-
-                    <label for="position">Position within Organization:</label><br>
-                    <input type="text" id="position" name="position" required pattern="[a-zA-Z\s-]{8,}"><br>
-
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required placeholder="example@example.com"
-                        pattern="[a-zA-Z0-9._%+-]@[a-zA-Z0-9.-]\.[a-zA-Z]{2,}">
-                    <br>
-
-                    <label for="phone">Mobile Phone Number:</label><br>
-                    <input type="tel" id="phone" name="phone" required><br>
-
-                    <label for="organization">Organization Name:</label><br>
-                    <input type="text" id="organization" name="organization" required><br>
-
-                    <label>Membership Level:</label><br>
-                    <input type="radio" id="NP" name="membership" value="NP" required>
-                    <label for="NP">NP Membership (Free)</label><br>
-
-                    <input type="radio" id="Bronze" name="membership" value="Bronze" required class="radiotype">
-                    <label for="Bronze">Bronze Membership ($50)</label><br>
-
-                    <input type="radio" id="Silver" name="membership" value="Silver" required class="radiotype">
-                    <label for="Silver">Silver Membership</label><br>
-
-                    <input type="radio" id="Gold" name="membership" value="Gold" required class="radiotype">
-                    <label for="Gold">Gold Membership</label><br>
-
-                    <label for="description">Organization Description:</label><br>
-                    <textarea id="description" name="description"></textarea><br>
-
-                    <input type="hidden" id="formDate" name="formDate">
-
-                    <button type="submit">Join Chamber</button>
-                </form>
-            </div>
-            <div id="form2">
-                <h2>Membership Benefits</h2>
-                <ul>
-                    <li>NP Membership: No fee, basic benefits</li>
-                    <li>Bronze Membership: Increased benefits</li>
-                    <li>Silver Membership: More benefits</li>
-                    <li>Gold Membership: Highest level of benefits</li>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p class="copy">&copy;<span id="currentYear"></span> RONALD BAMUTESIZA | WDD 230 project |
-        </p>
-        <p id="lastUpdated"></p>
-    </footer>
-    <script src="scripts/join.js">
-    </script>
+    </section>
+    <script src="scripts/weatherforecast.js"></script>
 </body>
 
 </html>

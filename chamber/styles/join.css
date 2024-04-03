@@ -94,12 +94,12 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: var(--headline-color-on-white);
+    color: var(--headline-color-on-color);
     font-size: 1.3rem;
 }
 
 header nav ul li a:hover {
-    color: var(--headline-color-on-color);
+    color: var(--headline-color-on-white);
 }
 
 header nav {
@@ -116,6 +116,15 @@ header img {
     width: 200px;
     height: 150px;
     margin-top: 20%;
+}
+
+header li.join {
+    border-style: ridge;
+    padding: 0 4px;
+}
+
+header a.join:hover {
+    color: var(--headline-color-on-color)
 }
 
 .zionhero h1 {

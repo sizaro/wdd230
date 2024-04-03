@@ -93,12 +93,12 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: var(--headline-color-on-white);
+    color: var(--headline-color-on-color);
     font-size: 1.3rem;
 }
 
 header nav ul li a:hover {
-    color: var(--headline-color-on-color);
+    color: var(--headline-color-on-white);
 }
 
 header nav {
@@ -115,6 +115,15 @@ header img {
     width: 200px;
     height: 150px;
     margin-top: 20%;
+}
+
+header li.directory {
+    border-style: ridge;
+    padding: 0 4px;
+}
+
+header a.directory:hover {
+    color: var(--headline-color-on-color)
 }
 
 .zionhero h1 {
@@ -134,14 +143,20 @@ header h1:hover {
 
 footer {
     display: flex;
-    text-align: center;
-    padding-right: 15px;
-    margin-left: 400px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #ebedef;
+    background-color: var(--headline-color-on-white);
+}
+
+footer p {
+    margin: 0 auto;
+    color: var(--accent3-color);
 }
 
 p#lastUpdated {
-    margin-left: 10px;
-
+    margin-left: -1px;
 }
 
 

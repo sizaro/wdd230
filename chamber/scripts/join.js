@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 })
 
+
 document.addEventListener("DOMContentLoaded", function () {
     let darkMode = document.querySelector("body");
     let darkModeButton = document.querySelector("#mode");
@@ -46,31 +47,88 @@ document.addEventListener("DOMContentLoaded", function () {
         darkMode.classList.toggle("dark-mode");
 
         if (darkMode.classList.contains("dark-mode")) {
-            document.querySelector("#mode").style.backgroundColor = "white"
-            document.querySelector(".joinButton").style.backgroundColor = "black";
+
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector("body").style.color = "white";
+
+            document.querySelector("header").style.backgroundColor = "black";
+            document.querySelector("header").style.color = "white";
+
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
+
+            document.querySelector(".copy").style.color = "white";
+            document.querySelector("#lastUpdated").style.color = "white";
+
+            document.querySelector(".nav").style.backgroundColor = "black";
+            document.querySelector(".nav").style.color = "white";
+
+            document.querySelector("#form2").style.backgroundColor = "black";
+
+
+            document.querySelectorAll("h2").forEach(h2 => {
+                h2.style.color = "white";
+            })
+
+
+            document.querySelectorAll("li").forEach(li => {
+                li.style.color = "white";
+            })
+
             document.querySelectorAll("section").forEach(section => {
                 section.style.backgroundColor = "black";
                 section.style.color = "white";
             }
+
             )
+
+
             darkModeButton.textContent = "🌙";
             darkModeButton.style.backgroundColor = "black";
         }
         else {
-            darkModeButton.style.setProperty('--before-content-mode', '');
-            document.querySelector(".joinButton").style.backgroundColor = "#3f84c0";
+
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.color = "black";
+
+            document.querySelector("header").style.backgroundColor = "#3f84c0";
+            document.querySelector("header").style.color = "white";
+
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
+
+            document.querySelector(".copy").style.color = "white";
+            document.querySelector("#lastUpdated").style.color = "white";
+
+            document.querySelector(".nav").style.backgroundColor = "rgba(100, 211, 255, 0.2)";
+            document.querySelector(".nav").style.color = "white";
+
+            document.querySelector("#form2").style.backgroundColor = "gray";
+
+
+            document.querySelectorAll("h2").forEach(h2 => {
+                h2.style.color = "black";
+            })
+
+
+            document.querySelectorAll("li").forEach(li => {
+                li.style.color = "yellow";
+            })
+
             document.querySelectorAll("section").forEach(section => {
-                section.style.backgroundColor = "#3f84c0";
-                section.style.color = "white";
+                section.style.backgroundColor = "gainsboro";
+                section.style.color = "black";
             }
+
             )
+
+
             darkModeButton.textContent = "🌞";
-            darkModeButton.style.backgroundColor = "white";
+            darkModeButton.style.backgroundColor = "black";
 
         }
 
     })
-
 })
 
 

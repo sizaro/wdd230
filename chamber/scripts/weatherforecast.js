@@ -3,28 +3,54 @@ async function forecastApiweatherFetch(url) {
     let response = await fetch(url);
     if (response.ok) {
         let data = await response.json();
-        displayweatherForecast(data)
+        displayweatherForecast(data);
     }
 }
 function displayweatherForecast(data) {
-    data.list.forEach(weatherinfo => {
-        let timeStamp = weatherinfo.dt;
-        let date = new Date(timeStamp);
-        let hour = date.getHours();
-        let dayOfweek = date.getDay();
-        if (hour == 15 && dayOfweek == 1) {
-            const para1day = document.querySelector("#forecastTempValue1");
-            const para2day = document.createElement("#forecastweatherDescription1");
-            para1day.textContent = `The temp is ${weatherinfo.main.temp}`;
-            para2day.textContent = `It is ${weatherinfo.weather[0].description}`;
-            /*const forecastIconCode = weatherinfo.weather[0].icon;
-            const forecastIconid = `https://openweathermap.org/img/w/${forecastIconCode}.png`
-            forecastImage.src = forecastIconid;
-            forecastImage.style.width = "100";
-            forecastImage.style.height = "100";*/
+    let currentDate = "";
+    let daycontainer = document.querySelector(".daycontainer");
+
+    data.list.forEach(weather => {
+        let dateTime = new Date(weather.dt * 1000);
+        let date = dateTime.toDateString();
+        let hours = dateTime.getHours();
+        let minutes = dateTime.getMinutes();
+
+        if (date !== currentDate) {
+            let newDayDiv = document.createElement("div");
+            let newDayhead = document.createElement('h2');
+            let weatherparaTime = document.createElement('p');
+            let weatherparaTemp = document.createElement('p');
+            let weatherparaDesc = document.createElement('p');
+            let weatherparaImg = document.createElement('img');
+            let forecastIconCode = weather.weather[0].icon;
+            weatherparaTime.textContent = `Time: ${hours}:${minutes}`;
+            weatherparaTemp.textContent = `Temperature: ${weather.main.temp}`;
+            weatherparaDesc.textContent = ` Description: ${weather.weather[0].description}`;
+            weatherparaImg.src = `https://openweathermap.org/img/w/${forecastIconCode}.png`;
+
+            newDayhead.textContent = date;
+            newDayDiv.appendChild(newDayhead);
+            daycontainer.appendChild(newDayDiv);
+            newDayDiv.appendChild(weatherparaTime);
+            newDayDiv.appendChild(weatherparaTemp);
+            newDayDiv.appendChild(weatherparaDesc);
+            newDayDiv.appendChild(weatherparaImg);
+
+            currentDate = date;
         }
-
-    });
+    })
 }
-forecastApiweatherFetch(weatherForecastUrl);
+/*
+        let newDayDiv = document.createElement("div");
+        
+ 
+        
+ 
+       
+    });*/
 
+
+
+
+forecastApiweatherFetch(weatherForecastUrl);
