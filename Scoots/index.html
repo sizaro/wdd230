@@ -10,19 +10,23 @@
 
 <body>
     <header>
-        <div class="logoimg"><img src="images/facebooklogo.png" alt=""></div>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Rentals</a>
-            <a href="">Reservations</a>
-            <a href="">Contact</a>
+        <div id="logoimg"><img src="images/facebooklogo.png" alt=""></div>
+        <nav class="nav">
+            <a class="navMode" href="">Home</a>
+            <a class="navMode" href="">Rentals</a>
+            <a class="navMode" href="">Reservations</a>
+            <a class="navMode" href="">Contact</a>
         </nav>
-        <div id="mode">☯</div>
+        <div id="humMode">
+            <div id="humburger"></div>
+            <div id="mode"></div>
+        </div>
+
     </header>
     <main>
         <div id="hero-container">
             <div class="heroImage"><img src="images/Kyabazinga-Royal-Palace.jpg" alt="heroImage">
-                <div class="reserve"><button>Reserve</button></div>
+                <div class="reserve"><button id="reserve">Reserve</button></div>
             </div>
         </div>
         <div class="imageContent">
@@ -82,8 +86,8 @@
 
     <footer>
         <div class="updated">
-            <p> &copy; 2024| Ronald Bamutesiza<span></span></p>
-            <p> last modified<span></span></p>
+            <p> &copy;<span id="currentYear"></span>Ronald Bamutesiza</p>
+            <p> last modified<span id="lastUpdated"></span></p>
         </div>
         <div class="contactIcons">
             <img src="" alt="facebook">
@@ -91,6 +95,7 @@
             <img src="" alt="gmail">
         </div>
     </footer>
+    <script src="scripts/scoops.js"></script>
 </body>
 
 </html>
