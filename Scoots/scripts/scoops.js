@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         else {
             darkModeButton.style.setProperty('--before-content-mode', '');
-            document.querySelector(".reserve").style.backgroundColor = "#3f84c0";
             document.querySelectorAll("section").forEach(section => {
                 section.style.backgroundColor = "#3f84c0";
                 section.style.color = "white";
