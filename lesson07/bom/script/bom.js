@@ -55,7 +55,7 @@ displayList = function (item) {
         deleteChapter(li.textContent);
         input.focus();
     })
-    console.log('I like to copy code instead of typing it out myself and trying to understand it.');
+    console.log('I like to copy code instead of typing it         out myself and trying to understand it.');
 }
 
 function setChapterList() {
