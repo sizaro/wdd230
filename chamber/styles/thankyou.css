@@ -98,7 +98,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: var(--headline-color-on-white);
+    text-decoration: underline;
 }
 
 header nav {
@@ -109,9 +109,8 @@ header nav {
 
 }
 
-header li.home {
+header li.join {
     border-style: ridge;
-    padding: 0 4px;
 }
 
 
@@ -176,4 +175,117 @@ footer p {
 p#lastUpdated {
     margin-left: 10px;
 
+}
+
+
+@media screen and (min-width:300px) and (max-width:769px) {
+
+    *Body {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    body {
+        margin: 0 1px;
+    }
+
+    div#mode {
+        margin-right: 5px;
+        font-size: 1.5rem;
+    }
+
+    div#humburger {
+        display: block;
+        margin-top: -70px;
+        margin-right: -49px;
+        font-size: 1.5rem;
+        color: #ebedef;
+    }
+
+    div.zionhero {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+        margin-left: 25%;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+
+    }
+
+    header nav {
+        margin-left: 0;
+    }
+
+    header img {
+        margin-right: 40px;
+        position: relative;
+        width: 60px;
+        height: 100%;
+    }
+
+    .zionhero h1 {
+        margin-right: 40px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    img {
+        width: 20px;
+        height: 30px;
+    }
+
+    nav.humburger {
+        position: absolute;
+        text-decoration: none;
+        display: none;
+        cursor: pointer;
+    }
+
+    /*div#humburger {
+        position: absolute;
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        color: green;
+        left: 12rem;
+        bottom: 15rem;
+        cursor: pointer;
+        z-index: 999;
+    }*/
+
+    nav.show {
+        display: block;
+        top: 1rem;
+        text-decoration: none;
+        color: black;
+        bottom: 29px;
+    }
+
+
+    header ul.show {
+        display: block;
+    }
+
+
+    .navigation li {
+        list-style: none;
+        padding-left: 4px;
+        z-index: 999;
+    }
 }

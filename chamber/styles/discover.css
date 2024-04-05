@@ -99,7 +99,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: var(--headline-color-on-white);
+    text-decoration: underline;
 }
 
 header nav {

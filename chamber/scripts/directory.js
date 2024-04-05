@@ -47,8 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (darkMode.classList.contains("dark-mode")) {
 
+            document.querySelector(".button").style.backgroundColor = "black";
+            document.querySelector(".button").style.color = "white";
+
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector("body").style.color = "white";
+
             document.querySelector("header").style.backgroundColor = "black";
             document.querySelector("header").style.color = "white";
+
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
 
             document.querySelector(".copy").style.color = "white";
             document.querySelector("#lastUpdated").style.color = "white";
@@ -63,20 +72,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
             )
 
+            document.querySelectorAll(".mode-directory").forEach(element => {
+                element.style.backgroundColor = "black";
+                element.style.color = "white";
+            }
+
+            )
+
+            /*
             document.querySelectorAll("p").forEach(paraElement => {
                 paraElement.style.color = "white";
             })
-
+*/
 
             darkModeButton.textContent = "🌙";
             darkModeButton.style.backgroundColor = "black";
         }
         else {
 
+            document.querySelector(".button").style.backgroundColor = "white";
+            document.querySelector(".button").style.color = "black";
 
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.color = "black";
 
             document.querySelector("header").style.backgroundColor = "#3f84c0";
             document.querySelector("header").style.color = "white";
+
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
 
             document.querySelector(".copy").style.color = "white";
             document.querySelector("#lastUpdated").style.color = "white";
@@ -92,9 +116,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
             )
 
-            document.querySelectorAll("p").forEach(paraElement => {
+            /*document.querySelectorAll("p").forEach(paraElement => {
                 paraElement.style.color = "black";
-            })
+            })*/
+
+            document.querySelectorAll(".mode-directory").forEach(element => {
+                element.style.backgroundColor = "gainsboro";
+                element.style.color = "black";
+            }
+
+            )
 
             darkModeButton.textContent = "🌞";
             darkModeButton.style.backgroundColor = "black";
@@ -125,6 +156,11 @@ function display(response) {
         let paragraph2 = document.createElement("p");
         let paragraph3 = document.createElement("p");
         let paragraph4 = document.createElement("p");
+        heading.classList.add("mode-directory");
+        paragraph1.classList.add("mode-directory");
+        paragraph2.classList.add("mode-directory");
+        paragraph3.classList.add("mode-directory");
+        paragraph4.classList.add("mode-directory");
         section.appendChild(heading);
         section.appendChild(portrait);
         section.appendChild(paragraph1);

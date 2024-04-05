@@ -24,7 +24,7 @@
             "phoneNumber": "+1 650-253-0000",
             "specialization": "internet related products and services",
             "websiteUrl": "https://www.google.com",
-            "image": "chamber/images/logo.webp",
+            "imageUrl": "images/googlelogo.webp",
             "membershipLevel": [
                 {
                     "gold": "access to exclusive events"
@@ -43,7 +43,7 @@
             "phoneNumber": "+1 408-996-1010",
             "specialization": "designing, manufacturing and selling consumer electronic ",
             "websiteUrl": "https://www.apple.com",
-            "image": "chamber/images/logo.webp",
+            "imageUrl": "images/applelogo.webp",
             "membershipLevel": [
                 {
                     "gold": "priority access to product launches"
@@ -62,7 +62,7 @@
             "phoneNumber": "+1 425-882-8080",
             "specialization": "development, licensing, supporting software products",
             "websiteUrl": " https://www.microsoft.com",
-            "image": "chamber/images/logo.webp",
+            "imageUrl": "images/microsoftlogo.webp",
             "membershipLevel": [
                 {
                     "gold": "ulimited access to Microsoft 365"
@@ -81,7 +81,7 @@
             "phoneNumber": "+1 206-266-1000",
             "specialization": "e-commerce",
             "websiteUrl": "https://www.amazon.com",
-            "image": "chamber/images/logo.webp",
+            "imageUrl": "images/amazonlogo.webp",
             "membershipLevel": [
                 {
                     "gold": "free two-day shipping on eligible products"
@@ -100,7 +100,7 @@
             "phoneNumber": "+1 650-543-4800",
             "specialization": "Social networking services",
             "websiteUrl": "https://www.facebook.com",
-            "image": "chamber/images/logo.webp",
+            "imageUrl": "images/facebooklogo.png",
             "membershipLevel": [
                 {
                     "gold": "Ad credits for promoting business"
@@ -119,7 +119,7 @@
             "phoneNumber": "+1 650-681-5000",
             "specialization": "Electric Vehicles and energy storage solutions",
             "websiteUrl": "https://www.tesla.com",
-            "image": "chamber/images/logo.webp",
+            "imageUrl": "images/teslalogo.webp",
             "membershipLevel": [
                 {
                     "gold": "Priority Tesla updates for vehicle"
@@ -138,7 +138,7 @@
             "phoneNumber": "+1 408-540-3700",
             "specialization": "Online streaming of movies and TV shows",
             "websiteUrl": " https://www.netflix.com",
-            "image": "chamber/images/logo.webp",
+            "imageUrl": "images/netflixlogo.webp",
             "membershipLevel": [
                 {
                     "gold": "Unlimited streaming of movies and TV shows in HD"

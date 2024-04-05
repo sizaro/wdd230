@@ -88,7 +88,13 @@ header nav ul {
 
 header nav ul li {
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 0 40px;
+
+
 }
 
 header nav ul li a {
@@ -98,10 +104,11 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: var(--headline-color-on-white);
+    text-decoration: underline;
 }
 
 header nav {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,9 +129,10 @@ header li.directory {
     padding: 0 4px;
 }
 
+/*
 header a.directory:hover {
     color: var(--headline-color-on-color)
-}
+}*/
 
 .zionhero h1 {
     margin-right: 180px;
@@ -147,7 +155,7 @@ footer {
     align-items: center;
     padding: 15px;
     color: #ebedef;
-    background-color: var(--headline-color-on-white);
+    background-color: black;
 }
 
 footer p {
@@ -237,14 +245,14 @@ p#lastUpdated {
 
 #grid {
     background-color: #1d2012;
-    color: #3f84c0;
+    color: var(--accent3-color);
     font-size: 20px;
 }
 
 #list {
     padding-left: 10px;
     background-color: #1d2012;
-    color: #3f84c0;
+    color: var(--accent3-color);
     font-size: 20px;
 }
 
@@ -286,20 +294,22 @@ p#lastUpdated {
     }
 
     header nav ul li {
-        margin: 0 5px;
-        margin-left: 25%;
+        margin: 0 2px;
     }
 
     header nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
         list-style-type: none;
-        display: block;
-        max-width: 100%;
-        margin: 0 auto;
+
 
     }
 
     header nav {
-        margin-left: 0;
+        margin: 0 auto;
     }
 
     header img {
