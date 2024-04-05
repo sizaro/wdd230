@@ -4,38 +4,14 @@ lastUpdated.innerHTML = `Last Modified ${(document.lastModified)}`;
 let currentYear = document.getElementById("currentYear");
 currentYear.textContent = "2024";
 
-let tempInput = document.querySelector("#tempValue");
-let speedInput = document.querySelector("#speedValue");
-let windchill = document.querySelector("#windchill");
-
-function calculateWindChill(temp, speed) {
-    if (temp <= 50 && speed > 3.0) {
-        let windchillResults = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
-        return windchillResults.toFixed(2);
-    } else {
-        return "N/A";
-    }
-}
-
-function updateWindChill() {
-    let tempValue = parseFloat(tempInput.value);
-    let speedValue = parseFloat(speedInput.value);
-
-    windchill.textContent = calculateWindChill(tempValue, speedValue);
-}
-
-tempInput.addEventListener('input', updateWindChill);
-speedInput.addEventListener('input', updateWindChill);
-
-updateWindChill();
 
 document.addEventListener("DOMContentLoaded", function () {
+    let logo = document.querySelector("#logoimg");
     let humburgerNav = document.querySelector("nav");
     humburgerNav.classList.add("humburger")
     let humburgerButton = document.querySelector("#humburger");
     if (humburgerNav.classList.contains("humburger")) {
         humburgerButton.textContent = "☰";
-        humburgerButton.textContent.style.color= "black"
     }
     if (humburgerNav.classList.contains("show")) {
         humburgerButton.textContent = "×";
@@ -44,12 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (humburgerNav.classList.contains("humburger")) {
             humburgerNav.classList.remove("humburger");
             humburgerNav.classList.add("show");
+
+            logo.classList.remove("logoshow");
+            logo.classList.add("imagelogo");
+
             humburgerButton.textContent = "×";
         }
 
         else {
             humburgerNav.classList.add("humburger");
             humburgerNav.classList.remove("show");
+
+            logo.classList.remove("imagelogo");
+            logo.classList.add("logoshow");
+
             humburgerButton.textContent = "☰";
         }
     })
@@ -72,23 +56,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (darkMode.classList.contains("dark-mode")) {
             document.querySelector("#mode").style.backgroundColor = "white"
-            document.querySelector(".joinButton").style.backgroundColor = "black";
+            document.querySelector(".reserve").style.backgroundColor = "black";
             document.querySelectorAll("section").forEach(section => {
                 section.style.backgroundColor = "black";
                 section.style.color = "white";
             }
             )
-            document.querySelector(".forecastedWeather").style.backgroundColor = "black";
-            document.querySelector(".forecastedWeather").style.color = "white";
 
-            document.querySelector(".daycontainer").style.backgroundColor = "black";
-            document.querySelector(".daycontainer").style.color = "white";
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector("body").style.color = "white";
+
+            document.querySelectorAll(".navMode").forEach(element => {
+                element.style.backgroundColor = "black";
+                element.style.color = "white";
+
+            })
+
+            document.querySelector("#reserve").style.backgroundColor = "black";
+            document.querySelector("#reserve").style.color = "white"
+
+            document.querySelector(".rentalTypes").style.backgroundColor = "black";
+            document.querySelector(".rentalTypes").style.color = "white";
+
+            document.querySelector(".images").style.backgroundColor = "black";
+            document.querySelector(".images").style.color = "white";
 
             document.querySelector("header").style.backgroundColor = "black";
             document.querySelector("header").style.color = "white";
 
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
+
             document.querySelector(".nav").style.backgroundColor = "black";
             document.querySelector(".nav").style.color = "white";
+
+            document.querySelector(".weatherInformation").style.backgroundColor = "black";
+            document.querySelector(".weatherInformation").style.color = "white";
 
 
             darkModeButton.textContent = "🌙";
@@ -96,32 +99,51 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         else {
             darkModeButton.style.setProperty('--before-content-mode', '');
-            document.querySelector(".joinButton").style.backgroundColor = "#3f84c0";
+            document.querySelector(".reserve").style.backgroundColor = "#3f84c0";
             document.querySelectorAll("section").forEach(section => {
                 section.style.backgroundColor = "#3f84c0";
                 section.style.color = "white";
             }
             )
-            document.querySelector(".forecastedWeather").style.backgroundColor = "#3f84c0";
-            document.querySelector(".forecastedWeather").style.color = "white";
 
-            document.querySelector(".daycontainer").style.backgroundColor = "#3f84c0";
-            document.querySelector(".daycontainer").style.color = "white";
+            document.querySelector("#reserve").style.backgroundColor = "white";
+            document.querySelector("#reserve").style.color = "black";
 
-            document.querySelector("header").style.backgroundColor = "#3f84c0";
-            document.querySelector("header").style.color = "white";
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.color = "black";
 
-            document.querySelector(".nav").style.backgroundColor = "rgba(100, 211, 255, 0.2)";
-            document.querySelector(".nav").style.color = "white";
+            document.querySelector(".rentalTypes").style.backgroundColor = "greenyellow";
+            document.querySelector(".rentalTypes").style.color = "black";
+
+            document.querySelector(".images").style.backgroundColor = "aquamarine";
+            document.querySelector(".images").style.color = "black";
+
+            document.querySelector("header").style.backgroundColor = "white";
+            document.querySelector("header").style.color = "black";
+
+            document.querySelector("footer").style.backgroundColor = "white";
+            document.querySelector("footer").style.color = "black";
+
+            document.querySelector(".nav").style.backgroundColor = "white";
+            document.querySelector(".nav").style.color = "black";
+
+            document.querySelector(".weatherInformation").style.backgroundColor = "white";
+            document.querySelector(".weatherInformation").style.color = "black";
+
+            document.querySelectorAll(".navMode").forEach(element => {
+                element.style.backgroundColor = "white";
+                element.style.color = "black";
+
+            })
 
             darkModeButton.textContent = "🌞";
-            darkModeButton.style.backgroundColor = "black";
+            darkModeButton.style.backgroundColor = "white";
 
         }
 
     })
 
-})
+})/*
 const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=0.4475271339059875&lon=33.20316576377895&appid=1b38869f1c347522d45b8c33cd852ef5";
 let weatherForecast = document.querySelector(".weatherForecast");
 let tempNow = document.querySelector("#currentTempValue");
@@ -149,5 +171,4 @@ function displayweatherNow(data) {
 
 }
 
-apiweatherFetch(weatherUrl);
-
+apiweatherFetch(weatherUrl);*/

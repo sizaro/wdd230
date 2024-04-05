@@ -21,7 +21,7 @@ if (lastVisit === 0) {
     visitDisplay.textContent = `You last visited ${daysDifference} ${daysDifference === 1 ? 'day' : 'days'} ago.`;
 };
 
-let lastUpdated = document.getElementById("lastUpdated");
+let lastUpdated = document.getElementById("lastModified");
 lastUpdated.innerHTML = `Last Modified ${(document.lastModified)}`;
 let currentYear = document.getElementById("currentYear");
 currentYear.textContent = "2024";
@@ -67,36 +67,64 @@ document.addEventListener("DOMContentLoaded", function () {
         darkMode.classList.toggle("dark-mode");
 
         if (darkMode.classList.contains("dark-mode")) {
-            document.querySelector("#mode").style.backgroundColor = "white"
-            document.querySelector(".joinButton").style.backgroundColor = "black";
-            document.querySelectorAll("section").forEach(section => {
-                section.style.backgroundColor = "black";
-                section.style.color = "white";
+            document.querySelector(".containerimages").style.backgroundColor = "black";
+            document.querySelector(".containerimages").style.color = "white";
+
+            document.querySelector("header").style.backgroundColor = "black";
+            document.querySelector("header").style.color = "white";
+
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
+
+            document.querySelector(".nav").style.backgroundColor = "black";
+            document.querySelector(".nav").style.color = "white";
+
+            document.querySelector(".image-container").style.backgroundColor = "black";
+            document.querySelector(".image-container").style.color = "white";
+
+            document.querySelectorAll(".about-images").forEach(element => {
+                element.style.backgroundColor = "black";
+                element.style.color = "white";
             }
+
             )
+
+
             darkModeButton.textContent = "🌙";
             darkModeButton.style.backgroundColor = "black";
         }
         else {
-            darkModeButton.style.setProperty('--before-content-mode', '');
-            document.querySelector(".joinButton").style.backgroundColor = "#3f84c0";
-            document.querySelectorAll("section").forEach(section => {
-                section.style.backgroundColor = "#3f84c0";
-                section.style.color = "white";
+
+
+            document.querySelector(".containerimages").style.backgroundColor = "#ebedef";
+            document.querySelector(".containerimages").style.color = "white";
+
+            document.querySelector("header").style.backgroundColor = "#3f84c0";
+            document.querySelector("header").style.color = "white";
+
+            document.querySelector("footer").style.backgroundColor = "black";
+            document.querySelector("footer").style.color = "white";
+
+            document.querySelector(".nav").style.backgroundColor = "rgba(100, 211, 255, 0.2)";
+            document.querySelector(".nav").style.color = "white";
+
+            document.querySelector(".image-container").style.backgroundColor = "#1d2012";
+            document.querySelector(".image-container").style.color = "white";
+
+            document.querySelectorAll(".about-images").forEach(element => {
+                element.style.backgroundColor = "gray";
+                element.style.color = "white";
             }
+
             )
+
             darkModeButton.textContent = "🌞";
-            darkModeButton.style.backgroundColor = "white";
+            darkModeButton.style.backgroundColor = "black";
 
         }
 
     })
-
 })
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     let datefun = () => {
@@ -109,5 +137,4 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     datefun();
-});
-
+})

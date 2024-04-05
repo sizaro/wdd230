@@ -39,87 +39,207 @@
 
 }
 
-* body {
-    box-sizing: border-box;
-}
-
-html {
-    background-color: white;
-}
-
-body {
-    background-color: white;
+*Body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow-x: hidden;
-    margin: 0 10px;
+
 }
 
 header {
-    position: relative;
-    display: var(--display-on-content);
+    background-color: var(--accent2-color);
+    width: 100%;
+    margin: 0 auto;
+}
+
+div.zionhero {
+    display: flex;
     flex-direction: row;
-    color: var(--headline-color-on-color);
-    background-color: var(--paragraph-color-on-white);
-    margin-bottom: 4px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-header nav li:hover {
-    text-decoration: underline;
+div#mode {
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+div#humburger {
+    margin-top: -50px;
+    margin-right: -39px;
+    display: none;
+}
+
+header nav ul {
     list-style-type: none;
-    color: blue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
-}
-
-header img {
-    width: 60px;
-    height: auto;
-}
-
-
-.navigation {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+
 }
 
-.navigation li {
-    padding: 0 10px;
-    margin: 0 2px;
-}
-
-nav a {
-    color: white;
+header nav ul li {
     text-decoration: none;
+    margin: 0 40px;
+    padding: 0 1rem;
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color: var(--headline-color-on-color);
+    font-size: 1.3rem;
+}
 
+header nav ul li a:hover {
+    color: var(--headline-color-on-white);
+}
 
-.zoj {
-    margin-top: 2px;
-    margin-left: 300px;
-    color: white;
-    text-align: center;
-    width: 500px;
-    font-size: larger;
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(100, 211, 255, 0.2);
 
 }
 
-.zoj :hover {
-    border: 4px solid white;
+header img {
+    margin-right: 180px;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin-top: 20%;
+}
+
+header li.join {
+    border-style: ridge;
+    padding: 0 4px;
+}
+
+header a.join:hover {
+    color: var(--headline-color-on-color)
+}
+
+.zionhero h1 {
+    margin-right: 180px;
+    color: var(--headline-color-on-color);
+}
+
+header h1:hover {
     padding: 4px;
+    color: var(--accent1-color);
+
 }
 
 .zoj a {
     text-decoration: none;
 }
 
-h1 {
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    background-color: var(--headline-color-on-white);
+    width: 100%;
+}
+
+p#lastUpdated {
+    margin-left: 1px;
+    font-size: 1.1rem;
+
+}
+
+footer p {
+    font-size: 1.1rem;
+    text-align: center;
     color: var(--headline-color-on-color);
 }
 
 
+
+div.form-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: row;
+    gap: 40px;
+    text-align: center;
+
+}
+
+ul li {
+    list-style-type: none;
+}
+
+div#form2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+}
+
+div#form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 0 auto;
+}
+
+div#form2 li {
+    font-size: 1.2rem;
+    color: yellow;
+}
+
+h1,
+h2 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+label {
+    font-size: 1.1rem;
+}
+
+
+input:invalid {
+    background-color: white;
+}
+
+input:valid {
+    color: white;
+    background-color: green;
+}
+
+#form1 input[type="text"],
+#form1 input[type="email"],
+#form1 input[type="tel"],
+#form1 input[type="password"],
+#form1 textarea,
+#form1 button {
+    min-width: 250px;
+    width: auto;
+}
+
+
+#form1 button[type="submit"]:hover {
+    background-color: var(--accent2-color);
+    color: var(--accent3-color);
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+
+
+/*
 h2,
 div,
 p,
@@ -132,21 +252,6 @@ label {
     font-size: 1.1rem;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    margin: 0 auto;
-    background-color: var(--accent3-color);
-}
-
-.form h1,
-h2 {
-    font-size: 1.5rem;
-    color: var(--headline-color-on-white);
-}
 
 input:invalid {
     background-color: white;
@@ -193,4 +298,121 @@ footer p {
 p#lastUpdated {
     margin-left: 10px;
 
+}
+*/
+
+
+@media screen and (min-width:300px) and (max-width:769px) {
+
+    *Body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    body {
+        margin: 0 1px;
+        overflow-x: hidden;
+    }
+
+    div#mode {
+        margin-right: 5px;
+        font-size: 1.5rem;
+    }
+
+    div#humburger {
+        display: block;
+        margin-top: -70px;
+        margin-right: -49px;
+        font-size: 1.5rem;
+        color: var(--accent3-color);
+    }
+
+    div.zionhero {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-left: 25%;
+    }
+
+
+    header img {
+        margin-right: 40px;
+        position: relative;
+        width: 60px;
+        height: 100%;
+    }
+
+    .zionhero h1 {
+        margin-right: 40px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    img {
+        width: 20px;
+        height: 30px;
+    }
+
+    nav.humburger {
+        position: absolute;
+        text-decoration: none;
+        display: none;
+        cursor: pointer;
+    }
+
+    /*div#humburger {
+        position: absolute;
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        color: green;
+        left: 12rem;
+        bottom: 15rem;
+        cursor: pointer;
+        z-index: 999;
+    }*/
+
+    nav.show {
+        display: block;
+        margin-left: 30%;
+        top: 1rem;
+        text-decoration: none;
+        color: black;
+        bottom: 29px;
+        margin-left: 0px;
+    }
+
+    nav.show:hover {
+        color: #ebedef;
+    }
+
+
+    header ul.show {
+
+        margin: 0 auto;
+    }
+
+
+    .navigation li {
+        list-style: none;
+        padding-left: 4px;
+        z-index: 999;
+    }
 }

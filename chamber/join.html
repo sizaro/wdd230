@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/join.css">
     <title>Join Chamber of Commerce </title>
     <meta name="author" content="Ronald Bamutesiza">
@@ -21,82 +19,125 @@
 
 <body>
     <header>
-        <div id="logoimg"><img src="zojeclogo.webp" class="logoimg" alt="zoj-logo"> <span id="chamber">
-            </span></div>
-        <div class="zoj">
-            <a href="">
-                <h1>Zion of Jinja Chamber of Commerce</h1>
-            </a>
+        <div class="zionhero">
+            <div id="logoimg"><img src="zojeclogo.webp" class="logoimg" alt="zoj-logo"> <span id="chamber">
+                </span></div>
+            <div class="zoj">
+                <a href="">
+                    <h1>Zion of Jinja Chamber of Commerce</h1>
+                </a>
+            </div>
+            <div id="humburger">
+            </div>
+            <div id="mode">
+            </div>
         </div>
-        <nav class="nav">
-            <ul class="navigation">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="discover.html">DISCOVER</a></li>
-                <li><a href="directory.html">DIRECTORY</a></li>
-                <li><a href="join.html">JOIN</a></li>
-            </ul>
-        </nav>
         <div>
-            <a href="" id="humburger"></a>
+            <nav class="nav">
+                <ul class="navigation">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="discover.html">DISCOVER</a></li>
+                    <li><a href="directory.html">DIRECTORY</a></li>
+                    <li class="join"><a href="join.html">JOIN</a></li>
+                </ul>
+            </nav>
         </div>
-        <div id="mode">
 
-        </div>
     </header>
     <main>
-        <div class="form">
-            <h1>Membership Application Form</h1>
-            <form action="thankyou.html" method="get">
-                <label for="firstName">First Name:</label><br>
-                <input type="text" id="firstName" name="firstName" required><br>
+        <h1>Membership Application Form</h1>
+        <div class="form-content">
+            <div id="form1">
+                <form action="thankyou.html" method="get">
+                    <label for="firstName">First Name:</label><br>
+                    <input type="text" id="firstName" name="firstName" required><br>
 
-                <label for="lastName">Last Name:</label><br>
-                <input type="text" id="lastName" name="lastName" required><br>
+                    <label for="lastName">Last Name:</label><br>
+                    <input type="text" id="lastName" name="lastName" required><br>
 
-                <label for="position">Position within Organization:</label><br>
-                <input type="text" id="position" name="position" required pattern="[a-zA-Z\s-]{8,}"><br>
+                    <label for="position">Position within Organization:</label><br>
+                    <input type="text" id="position" name="position" required pattern="[a-zA-Z\s-]{8,}"><br>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required placeholder="example@example.com"
-                    pattern="[a-zA-Z0-9._%+-]@[a-zA-Z0-9.-]\.[a-zA-Z]{2,}">
-                <br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="example@example.com"
+                        pattern="[a-zA-Z0-9._%+-]@[a-zA-Z0-9.-]\.[a-zA-Z]{2,}">
+                    <br>
 
-                <label for="phone">Mobile Phone Number:</label><br>
-                <input type="tel" id="phone" name="phone" required><br>
+                    <label for="phone">Mobile Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" required><br>
 
-                <label for="organization">Organization Name:</label><br>
-                <input type="text" id="organization" name="organization" required><br>
+                    <label for="organization">Organization Name:</label><br>
+                    <input type="text" id="organization" name="organization" required><br>
 
-                <label>Membership Level:</label><br>
-                <input type="radio" id="NP" name="membership" value="NP" required>
-                <label for="NP">NP Membership (Free)</label><br>
+                    <label>Membership Level:</label><br>
+                    <input type="radio" id="NP" name="membership" value="NP" required>
+                    <label for="NP">NP Membership</label><br>
 
-                <input type="radio" id="Bronze" name="membership" value="Bronze" required>
-                <label for="Bronze">Bronze Membership</label><br>
+                    <input type="radio" id="Bronze" name="membership" value="Bronze" required class="radiotype">
+                    <label for="Bronze">Bronze Membership</label><br>
 
-                <input type="radio" id="Silver" name="membership" value="Silver" required>
-                <label for="Silver">Silver Membership</label><br>
+                    <input type="radio" id="Silver" name="membership" value="Silver" required class="radiotype">
+                    <label for="Silver">Silver Membership</label><br>
 
-                <input type="radio" id="Gold" name="membership" value="Gold" required>
-                <label for="Gold">Gold Membership</label><br>
+                    <input type="radio" id="Gold" name="membership" value="Gold" required class="radiotype">
+                    <label for="Gold">Gold Membership</label><br>
 
-                <label for="description">Organization Description:</label><br>
-                <textarea id="description" name="description"></textarea><br>
+                    <label for="description">Organization Description:</label><br>
+                    <textarea id="description" name="description"></textarea><br>
 
-                <input type="hidden" id="formDate" name="formDate">
+                    <input type="hidden" id="formDate" name="formDate">
 
-                <button type="submit">Join Chamber</button>
-            </form>
-
-            <aside>
+                    <button type="submit">Join Chamber</button>
+                </form>
+            </div>
+            <div id="form2">
                 <h2>Membership Benefits</h2>
                 <ul>
-                    <li>NP Membership: No fee, basic benefits</li>
-                    <li>Bronze Membership: Increased benefits</li>
-                    <li>Silver Membership: More benefits</li>
-                    <li>Gold Membership: Highest level of benefits</li>
+                    <li class="li">
+                        <h2>NP Membership:</h2><br> No fee, basic benefits <br>Benefits: <br>
+                        Basic access to limited services or content <br>
+                        Entry-level features <br>
+                        Standard customer support <br>
+                        Access to community forums or basic resources <br>
+                        Price: Free <br>
+                    </li>
+                    <li class="li">
+                        <h2>Bronze Membership:</h2><br>Benefits: <br>
+                        Basic access to services or content <br>
+                        Entry-level features <br>
+                        Standard customer support <br>
+                        Access to community forums or basic resources <br>
+                        Price Range: $5 - $20 per month <br>
+                    </li>
+                    <li class="li">
+                        <h2>Silver Membership:</h2><br>Benefits: <br>
+                        Enhanced access to services or content <br>
+                        More features than Bronze <br>
+                        Priority customer support <br>
+                        Exclusive discounts or deals <br>
+                        Price Range: $15 - $50 per month <br>
+                    </li>
+                    <li class="li">
+                        <h2>Gold Membership:</h2><br>Benefits: <br>
+                        Premium access to services or content <br>
+                        Advanced features <br>
+                        Dedicated customer support <br>
+                        Access to exclusive events or content <br>
+                        Special perks such as early access or beta testing <br>
+                        Price Range: $30 - $100 per month <br>
+                    </li>
+                    <li class="li">
+                        <h2>Platinum Membership:</h2><br>Benefits: <br>
+                        VIP access to all services or content <br>
+                        All features unlocked <br>
+                        24/7 priority customer support <br>
+                        Personalized services or recommendations <br>
+                        Invitations to exclusive events or trips <br>
+                        Additional perks like concierge services <br>
+                        Price Range: $75 - $300+ per month <br>
+                    </li>
                 </ul>
-            </aside>
+            </div>
         </div>
     </main>
     <footer>

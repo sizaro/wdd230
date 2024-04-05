@@ -39,66 +39,109 @@
 
 }
 
-* body {
-    box-sizing: border-box;
-}
+*Body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    color: #1d2012;
 
-html {
-    background-color: var(--accent3-color);
-}
-
-body {
-    background-color: var(--headline-color-on-white);
-    overflow-x: hidden;
-    margin: 0 10px;
 }
 
 header {
-    position: relative;
-    display: var(--display-on-content);
+    background-color: var(--accent2-color);
+    width: 100%;
+    margin: 0 auto;
+}
+
+div.zionhero {
+    display: flex;
     flex-direction: row;
-    color: var(--headline-color-on-color);
-    background-color: var(--paragraph-color-on-white);
-    margin-bottom: 4px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-header nav li:hover {
-    text-decoration: underline;
-    color: blue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
+div#mode {
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
-
-.navigation {
-    margin-left: 20px;
+div#humburger {
+    margin-top: -50px;
+    margin-right: -39px;
+    display: none;
 }
 
-nav a {
-    color: white;
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul li {
     text-decoration: none;
+    margin: 0 40px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--headline-color-on-color);
+    font-size: 1.3rem;
+}
+
+header nav ul li a:hover {
+    color: var(--headline-color-on-white);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(100, 211, 255, 0.2);
+
+}
+
+header li.home {
+    border-style: ridge;
+    padding: 0 4px;
 }
 
 
+header img {
+    margin-right: 180px;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin-top: 20%;
+}
 
-.zoj {
-    margin-top: 2px;
-    margin-left: 300px;
-    color: white;
-    text-align: center;
-    width: 500px;
-    font-size: larger;
+.zionhero h1 {
+    color: var(--headline-color-on-color);
+    margin-right: 180px;
+}
 
+header h1:hover {
+    padding: 4px;
+    color: var(--accent1-color);
+
+}
+
+img {
+    width: 20px;
+    height: 30px;
 }
 
 section img {
     width: 40px;
     height: 45px;
-}
-
-.zoj :hover {
-    border: 4px solid white;
-    padding: 4px;
 }
 
 .zoj a {
@@ -112,7 +155,12 @@ section img {
 .advert,
 .advert2,
 .advert3,
-.advert4 {
+.advert4,
+.forecastedWeather,
+.daycontainer,
+div.monday,
+div.tuesday,
+div.wednesday {
     border: 1px solid white;
     background-color: var(--nav-background-color);
 
@@ -162,7 +210,7 @@ section img {
 
 .container {
     display: grid;
-    grid-template: 2fr/2fr 1fr 1fr;
+    grid-template: 2fr 2fr/2fr 1fr 1fr;
     grid-auto-flow: row;
     justify-content: center;
     align-items: center;
@@ -193,6 +241,43 @@ h1 {
     grid-column: 3/4;
     grid-row: 1/2;
     height: 100%;
+}
+
+.forecastedWeather {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    height: 100%;
+}
+
+.daycontainer {
+    display: grid;
+    grid-template: 2fr/1fr 1fr 1fr;
+    grid-auto-flow: row;
+    height: 100%;
+}
+
+div.monday {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100%;
+}
+
+div.tuesday {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 100%;
+}
+
+div.wednesday {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    height: 100%;
+}
+
+div.monday p,
+div.tuesday p,
+div.wednesday p {
+    color: #ebedef
 }
 
 #advertisement {
@@ -252,38 +337,25 @@ p {
     object-fit: cover;
 }
 
-#logoimg img {
-    width: 60px;
-    height: auto;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-}
-
-#logoimg {
-    text-align: justify;
-}
-
-.navigation li {
-    list-style: none;
-    padding-left: 40px;
-}
-
-.zoj li {
-    margin-left: 40px;
-    color: white;
-}
-
-.navigation {
-    display: flex;
-    z-index: -1;
-}
-
 footer {
     display: flex;
     text-align: center;
-    padding-right: 15px;
-    margin-left: 400px;
+    padding: 15px;
+    color: var(--headline-color-on-white);
+    background-color: #1d2012;
+}
+
+main {
+    color: #1d2012;
+}
+
+footer p {
+    margin: 0 auto;
+
+    color: var(--headline-color-on-color);
+
+
+
 }
 
 p#lastUpdated {
@@ -291,80 +363,74 @@ p#lastUpdated {
 
 }
 
-#mode {
-    position: absolute;
-    left: 80rem;
-    top: 0.2rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    background-color: black;
-
-}
-
 @media screen and (min-width:300px) and (max-width:769px) {
 
-    html {
-        overflow-x: hidden;
-        background-color: white;
-        max-width: 100%;
+    *Body {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    }
-
-    * body {
-        box-sizing: border-box;
-        max-width: 100%;
     }
 
     body {
-        box-sizing: border-box;
-        overflow-x: hidden;
+        margin: 0 1px;
+    }
+
+    div#mode {
+        margin-right: 5px;
+        font-size: 1.5rem;
+    }
+
+    div#humburger {
+        display: block;
+        margin-top: -70px;
+        margin-right: -49px;
+        font-size: 1.5rem;
+    }
+
+    div.zionhero {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
         justify-content: center;
         align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        display: block;
         max-width: 100%;
-        margin: 0 20px;
-        padding: 0 10px;
+        margin: 0 auto;
     }
 
-    header {
+    header nav {
+        margin-left: 0;
+    }
+
+    header img {
+        margin-right: 20px;
         position: relative;
-        display: block;
-
+        width: 60px;
+        height: 100%;
     }
 
-    .navigation {
-        margin-left: 40px;
-        display: block;
-        z-index: 1;
-    }
-
-    header nav li:hover {
-        background-color: var(--accent2-color);
-    }
-
-    nav a {
-        color: white;
+    .zionhero h1 {
+        margin-right: 20px;
+        font-size: 1.2rem;
         text-decoration: none;
-    }
-
-    .zoj {
-        margin-top: 2px;
-        margin-left: 15px;
-        color: white;
         text-align: center;
-        width: 400px;
-        font-size: larger;
-
     }
 
-    .zoj :hover {
-        border: 4px solid white;
-        padding: 4px;
+    img {
+        width: 20px;
+        height: 30px;
     }
-
-    .zoj a {
-        text-decoration: none;
-    }
-
 
     nav.humburger {
         position: absolute;
@@ -389,20 +455,8 @@ p#lastUpdated {
         display: block;
         top: 1rem;
         text-decoration: none;
-        color: white;
+        color: black;
         bottom: 29px;
-    }
-
-    div#humburger {
-        position: absolute;
-        text-decoration: none;
-        display: block;
-        font-size: 40px;
-        color: green;
-        left: 24rem;
-        bottom: 1rem;
-        cursor: pointer;
-        z-index: 999;
     }
 
 
@@ -412,6 +466,9 @@ p#lastUpdated {
 
 
     .navigation li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         list-style: none;
         padding-left: 4px;
         z-index: 999;
@@ -544,20 +601,9 @@ p#lastUpdated {
         margin-left: 10px;
 
     }
-
-    #mode {
-        position: absolute;
-        left: 530px;
-        top: 1.9px;
-        margin-left: 10px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        background-color: black;
-
-    }
 }
 
-@media screen and (min-width:770px) and (max-width:999px) {
+/*@media screen and (min-width:770px) and (max-width:999px) {
 
     html {
         overflow-x: hidden;
