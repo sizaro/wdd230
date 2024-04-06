@@ -194,6 +194,27 @@ div.wednesday {
     text-align: center;
 }
 
+.event-para {
+    font-size: 1.2rem;
+    background-color: "black";
+}
+
+.event-button {
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+}
+
+#eventBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: "black";
+    background-color: rgba(80, 80, 225, 0.6);
+}
+
 .promo {
     display: grid;
     justify-content: center;

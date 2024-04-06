@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let humburgerButton = document.querySelector("#humburger");
     if (humburgerNav.classList.contains("humburger")) {
         humburgerButton.textContent = "☰";
-        humburgerButton.textContent.style.color= "black"
+        humburgerButton.textContent.style.color = "black"
     }
     if (humburgerNav.classList.contains("show")) {
         humburgerButton.textContent = "×";
@@ -72,6 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (darkMode.classList.contains("dark-mode")) {
 
+            document.querySelector("#eventBanner").style.backgroundColor = "black";
+            document.querySelector("#eventBanner").style.color = "white";
+
             document.querySelectorAll(".mode-weather").forEach(element => {
                 element.style.backgroundColor = "black";
                 element.style.color = "white";
@@ -101,6 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
             darkModeButton.style.backgroundColor = "black";
         }
         else {
+
+            document.querySelector("#eventBanner").style.backgroundColor = "rgba(80, 80, 225, 0.6)";
+            document.querySelector("#eventBanner").style.color = "white";
             document.querySelectorAll(".mode-weather").forEach(element => {
                 element.style.backgroundColor = "#3f84c0";
                 element.style.color = "white";
@@ -209,16 +215,32 @@ function displayweatherForecast(data) {
         }
     })
 }
-/*
-        let newDayDiv = document.createElement("div");
-        
- 
-        
- 
-       
-    });*/
-
-
 
 
 forecastApiweatherFetch(weatherForecastUrl);
+
+addEventListener("DOMContentLoaded", () => {
+
+    let dayDate = new Date();
+    let dayOfWeek = dayDate.getDay();
+    if (dayOfWeek == 0 || dayOfWeek == 6 || dayOfWeek == 1) {
+
+        let eventBanner = document.querySelector("#eventBanner");
+        eventBanner.style.display = "flex";
+        eventBanner.style.color = "black";
+        let eventPara = document.createElement("p");
+        let eventButton = document.createElement("button");
+        eventPara.textContent = "You are invited to Zion of Jinja chamber of commerce meet and greet on Wednesday at 7:00 p.m.";
+        eventButton.textContent = `X`;
+        eventPara.classList.add("event-para");
+        eventButton.classList.add("event-button");
+        eventBanner.appendChild(eventPara);
+        eventBanner.appendChild(eventButton);
+
+        eventButton.addEventListener("click", () => {
+            eventBanner.style.display = "none";
+        })
+
+    }
+
+})
