@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let humburgerButton = document.querySelector("#humburger");
     if (humburgerNav.classList.contains("humburger")) {
         humburgerButton.textContent = "☰";
-        humburgerButton.textContent.style.color = "black"
+
     }
     if (humburgerNav.classList.contains("show")) {
         humburgerButton.textContent = "×";

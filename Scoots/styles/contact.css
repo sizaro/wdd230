@@ -1,0 +1,222 @@
+:root {
+    --animation-direction: alternate;
+}
+
+*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 10px;
+}
+
+body,
+table,
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+
+.form-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: row;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.contact-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 3rem;
+}
+
+#simple-form {
+    margin: 0 auto;
+}
+
+#contact-info h2,
+#contact-info p,
+#contact-info h3,
+#contact-info h4 {
+    text-align: center;
+}
+
+#logoimg {
+    display: flex;
+    margin-right: 10%;
+    margin-left: 5px;
+    width: 20px;
+    height: 25px;
+}
+
+#logoimg img {
+    width: 100%;
+    height: auto;
+}
+
+#mode {
+    display: flex;
+    width: 20px;
+    height: 25px;
+    font-size: 1.2rem;
+}
+
+#humburger {
+    display: none;
+}
+
+#humMode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+nav a {
+    padding: 0 3rem;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.updated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contactIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+@media screen and (max-width:699px) {
+
+    *body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 10px;
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 8rem;
+        margin-bottom: 1rem;
+        margin-top: -2rem;
+    }
+
+    .logoimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4rem;
+        margin-left: -1rem;
+        width: 10px;
+        height: 15px;
+    }
+
+    .logoimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    #mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+    }
+
+    #humburger {
+        display: block;
+    }
+
+    #humMode {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logoimg {
+        width: 10rem;
+        height: 6rem;
+        margin-top: 2.5rem;
+    }
+
+    #logoimg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav a {
+        display: block;
+        text-decoration: none;
+    }
+
+    nav {
+        display: none;
+        height: 1rem;
+    }
+
+    .show {
+        display: block;
+        height: 1rem;
+    }
+
+}
