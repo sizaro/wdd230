@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <div id="weatherInformation">
+    </div>
     <header>
         <div id="logoimg"><img src="images/facebooklogo.png" alt=""></div>
         <nav class="nav">
@@ -26,7 +28,7 @@
     <main>
         <div id="hero-container">
             <div class="heroImage"><img src="images/Kyabazinga-Royal-Palace.jpg" alt="heroImage">
-                <div class="reserve"><button id="reserve">Reserve</button></div>
+                <div class="reserve"><a href="reservations.html"><button id="reserve">Reserve</button></a></div>
             </div>
         </div>
         <div class="imageContent">
@@ -53,35 +55,23 @@
             </div>
             <div class="rentalTypes">
                 <div>
-                    <h2>heading 2</h2>
-                    <p>paragraph</p>
+                    <h2>The current temperature</h2>
+                    <p>is <span class="current-temperature"></span></p>
                 </div>
                 <div>
-                    <h2>heading 2</h2>
-                    <p>paragraph</p>
+                    <h2>The current humidity</h2>
+                    <p>is <span class="current-humidity"></span></p>
                 </div>
                 <div>
-                    <h2>heading 2</h2>
-                    <p>paragraph</p>
-                </div>
-                <div>
-                    <h2>heading 2</h2>
-                    <p>paragrraph</p>
-                </div>
-                <div>
-                    <h2>heading 2</h2>
-                    <p>paragraph</p>
+                    <h2> The next day's forecasted temperature at 15:00 (3:00pm).</h2>
+                    <p>main temp <span class="main-temp"></span></p>
+                    <p> <span class="description"></span></p>
+                    <p>main <span class="main-weather"></span></p>
+                    <p>humidity <span class="forecast-humidity"></span></p>
+                    <img src="" alt="" class="weather-icon">
                 </div>
             </div>
         </div>
-        <div class="weatherInformation">
-            <p>degrees</p>
-            <p>degrees</p>
-            <p>degrees</p>
-            <img src="" alt="weatherIcon">
-        </div>
-
-
     </main>
 
     <footer>
@@ -90,12 +80,12 @@
             <p> last modified<span id="lastUpdated"></span></p>
         </div>
         <div class="contactIcons">
-            <img src="" alt="facebook">
-            <img src="" alt="whatsapp">
-            <img src="" alt="gmail">
+            <a href="https://www.facebook.com" target="_blank"><img src="images/facebooklogo.png" alt="facebook"></a>
+            <a href="https://www.whatsapp.com/"><img src="images/whatsapp logo.png" alt="whatsapp"></a>
+            <a href="https://www.gmail.com"><img src="images/googlelogo.webp" alt="gmail"></a>
         </div>
     </footer>
-    <script src="scripts/scoops.js"></script>
+    <script src="scripts/scoots.js"></script>
 </body>
 
 </html>

@@ -100,10 +100,18 @@ nav {
 }
 
 footer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    width: 100%;
+}
+
+
+footer img {
+    width: 50px;
+    height: auto;
 }
 
 .updated {
@@ -114,10 +122,13 @@ footer {
 }
 
 .contactIcons {
+    position: absolute;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 5px;
 }
 
 
