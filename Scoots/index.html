@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoots Home</title>
     <link rel="stylesheet" href="styles/base.css">
+    <meta name="author" content="Ronald Bamutesiza">
+    <meta name="description"
+        content="Discover paradise with Scoots Vacation Services! Explore breathtaking fun islands, pristine beaches, all types of rent types, scooters, jeep, many honda cruisers, and luxurious accommodations. Plan your dream getaway today.">
+    <meta property=" og:title" content="Scoots vacation services">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
     <div id="weatherInformation">
     </div>
     <header>
-        <div id="logoimg"><img src="images/facebooklogo.png" alt=""></div>
+        <div id="logoimg"><img src="images/scoots logo.png" alt="scoots logo" loading="lazy"></div>
         <nav class="nav">
-            <a class="navMode" href="index.html">Home</a>
+            <a class="navMode" id="home-page" href="index.html">Home</a>
             <a class="navMode" href="rentals.html">Rentals</a>
             <a class="navMode" href="reservations.html">Reservations</a>
             <a class="navMode" href="contact.html">Contact</a>
@@ -27,36 +36,47 @@
     </header>
     <main>
         <div id="hero-container">
-            <div class="heroImage"><img src="images/Kyabazinga-Royal-Palace.jpg" alt="heroImage">
+            <div class="heroImage">
+                <picture>
+                    <source srcset="images/hero-image.webp" media="(max-width:500px)">
+                    <source srcset="images/jinja-nile.jpeg" media="(max-width:999px)">
+                    <img src="images/jinja-city-zion-building.jpg" alt="Favorite Temple" max-width="100" height="120"
+                        loading="lazy">
+                </picture>
                 <div class="reserve"><a href="reservations.html"><button id="reserve">Reserve</button></a></div>
             </div>
         </div>
         <div class="imageContent">
             <div class="images">
-                <div><img src="images/carrots.jpg" alt="">
-                    <p>nice carrots</p>
+                <div><img src="images/scooter.webp" alt="Honda Metro Scooter" loading="lazy">
+                    <h2>~Honda Metro Scooter</h2>
+                    <p>(49cc) - 1 person</p>
                 </div>
-                <div><img src="images/fieldjinja.jpg" alt="">
-                    <p>nice field</p>
+                <div><img src="images/honda dio 2 persons.webp" alt="Honda Dio Scooter" loading="lazy">
+                    <h2>~Honda Dio Scooter</h2>
+                    <p>(110cc) - 2 person</p>
                 </div>
-                <div> <img src="images/jinja-nile.jpeg" alt="">
-                    <p>nice nile</p>
+                <div> <img src="images/honda dio 2 persons1.webp" alt="Honda PCX150 Scooter" loading="lazy">
+                    <h2>~Honda PCX150 Scooter</h2>
+                    <p>(149cc) - 2 person</p>
                 </div>
-                <div> <img src="images/jinja-blue-sky.jpg" alt="">
-                    <p>blue sky</p>
+                <div> <img src="images/honda 4 persons.webp" alt="Honda Pioneer ATV" loading="lazy">
+                    <h2>Honda Pioneer ATV</h2>
+                    <p>4 door manuel with A/C - 5 person</p>
                 </div>
-                <div> <img src="images/jinja-city-area.jpeg" alt="">
-                    <p>nice area</p>
+                <div> <img src="images/jeep 4 door.webp" alt="Jeep Wrangler - 4 door with a/c" loading="lazy">
+                    <h2>Jeep Wrangler - 4 door with a/c</h2>
+                    <p>1000 - 4 person</p>
                 </div>
-                <div><img src="images/jinja-wedding-marriage.jpg
-                    " alt="">
-                    <p>nice wedding</p>
+                <div><img src="images/jeep 2 door1.webp" alt="Jeep Wrangler - 2 door" loading="lazy">
+                    <h2>Jeep Wrangler - 2 door</h2>
+                    <p>2 door - open air - manuel - 4 person</p>
                 </div>
             </div>
             <div class="rentalTypes">
                 <div>
                     <h2>The current temperature</h2>
-                    <p>is <span class="current-temperature"></span></p>
+                    <p>is <span class="current-temperature"></span>°F</p>
                 </div>
                 <div>
                     <h2>The current humidity</h2>
@@ -64,7 +84,7 @@
                 </div>
                 <div>
                     <h2> The next day's forecasted temperature at 15:00 (3:00pm).</h2>
-                    <p>main temp <span class="main-temp"></span></p>
+                    <p>main temp <span class="main-temp"></span>°F</p>
                     <p> <span class="description"></span></p>
                     <p>main <span class="main-weather"></span></p>
                     <p>humidity <span class="forecast-humidity"></span></p>

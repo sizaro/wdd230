@@ -27,12 +27,13 @@ main {
 
 }
 
-.form-info {
+#form-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-flow: row;
+    grid-auto-flow: column;
     gap: 10px;
     margin: 0 10px;
+    width: 100%;
 }
 
 .contact-information {
@@ -53,8 +54,64 @@ header {
     height: 3rem;
 }
 
+#simple-form,
+#contact-info {
+    margin: 0 10px;
+    background-color: gray;
+
+}
+
 #simple-form {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+label {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+input:valid {
+    color: black;
+    background-color: whiter;
+    border: 2px solid green;
+}
+
+input:invalid {
+    color: black;
+    background-color: gary;
+    border: 2px solid red;
+}
+
+input {
+    width: 250px;
+    height: 35px;
+}
+
+#button:hover {
+    font-size: 1.5rem;
+    background-color: green;
+    color: white;
+    border: 1px solid blue;
+}
+
+#button {
+    font-size: 1.2rem;
+    background-color: white;
+    color: black;
+    border: 1px solid blue;
+}
+
+#simple-form,
+#contact-info {
+    margin: 0 10px;
+    background-color: white;
+
+}
+
+#description {
+    height: 50px;
 }
 
 #contact-info h2,

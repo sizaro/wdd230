@@ -25,41 +25,39 @@
     </header>
     <main>
         <div class="contact-information">
-            <div class="form-info">
+            <div id="form-info">
                 <div id="simple-form">
-                    <h2>hello there</h2>
                     <form action="thankyou.html" method="get">
                         <h2>Contact Information</h2>
                         <label for="">first-name</label><br>
-                        <input type="text" name="first-name" id="first-name"><br>
-                        <label for="">first-name</label><br>
-                        <input type="text" name="first-name" id="first-name"><br>
+                        <input type="text" name="first-name" id="first-name" required><br>
+                        <label for="">last-name</label><br>
+                        <input type="text" name="last-name" id="last-name" required><br>
                         <label for="">email address</label><br>
-                        <input type="email"><br>
-                        <label for="description">description</label><br>
+                        <input type="email" required pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}"><br>
+                        <label for="description" id="description">description</label><br>
                         <textarea name="comment" id="comment"></textarea><br><br>
-                        <button type="button">Contact us</button>
+                        <button type="submit" id="button">Contact us</button>
                     </form>
                 </div>
                 <div id="contact-info">
-                    <h3>Contact us</h3><br>
-                    <h2>facebook</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestias aspernatur sapiente
-                        aperiam, tempore consequuntur odio magnam beatae voluptate similique iusto molestiae vero
-                        ratione sed, consectetur ipsa doloribus nemo optio <br><a href="facebook.html">Facebook</a></p>
-                    <h2>whatsapp</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestias aspernatur sapiente
-                        aperiam, tempore consequuntur odio magnam beatae voluptate similique iusto molestiae vero
-                        ratione sed, consectetur ipsa doloribus nemo optio <br><a href="whatsapplink">whatsapp</a></p>
-                    <h2>Email</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestias aspernatur sapiente
-                        aperiam, tempore consequuntur odio magnam beatae voluptate similique iusto molestiae vero
-                        ratione sed, consectetur ipsa doloribus nemo optio <br><a href="scoots.gmaillink">email
+                    <h2>Contact us</h2><br>
+                    <h3>facebook</h3>
+                    <p>
+                        Connect with us on Facebook for updates and news. <br>
+                        Follow us on Facebook to stay in touch with our latest activities. <br><a
+                            href="facebook.html">Facebook</a></p>
+                    <h3>whatsapp</h3>
+                    <p>Chat with us on WhatsApp for instant support. <br>
+                        Reach out to us via WhatsApp for quick responses.<br><a href="whatsapplink">whatsapp</a></p>
+                    <h3>Email</h3>
+                    <p>Send us an email for inquiries and assistance. <br>
+                        Drop us an email with any questions or concerns you may have. <br><a
+                            href="scoots.gmaillink">email
                             address</a></p>
-                    <h2>Call/Text</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestias aspernatur sapiente
-                        aperiam, tempore consequuntur odio magnam beatae voluptate similique iusto molestiae vero
-                        ratione sed, consectetur ipsa doloribus nemo optio <br>
+                    <h3>Call/Text</h3>
+                    <p>Call or text us directly for immediate assistance. <br>
+                        Reach us instantly via phone or text for urgent matters. <br>
                     <h4>256758116304</h4>
                     </p>
                 </div>

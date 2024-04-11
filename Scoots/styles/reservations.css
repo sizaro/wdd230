@@ -27,6 +27,51 @@ main {
 
 }
 
+label {
+    font-size: 1.1rem;
+}
+
+
+input:invalid {
+    background-color: blue;
+    color: white;
+}
+
+input:valid {
+    color: black;
+}
+
+#fill-form input[type="text"],
+#fill-form input[type="email"],
+#fill-form input[type="tel"],
+#fill-form input[type="password"],
+#fill-form textarea,
+#fill-form button {
+    min-width: 250px;
+    height: 25px;
+}
+
+#fill-form textarea {
+    min-width: 250px;
+    height: 35px;
+}
+
+#fill-form input {
+    font-size: 1rem;
+}
+
+#fill-form button {
+    min-width: 200px;
+    height: 30px;
+}
+
+#submit-button[type="submit"]:hover {
+    background-color: green;
+    color: white;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
 .form-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -51,6 +96,15 @@ header {
 #comments-form h2,
 #comments-form p {
     text-align: center;
+}
+
+#comments-form {
+    margin: 0 10px 0 0;
+}
+
+#comments-form p,
+#comments-form li {
+    font-size: 1.3rem;
 }
 
 #logoimg {
@@ -112,6 +166,10 @@ footer {
 footer img {
     width: 50px;
     height: auto;
+}
+
+#currentYear {
+    padding: 0 4px;
 }
 
 .updated {
@@ -217,6 +275,39 @@ footer img {
     .show {
         display: block;
         height: 1rem;
+    }
+
+
+    footer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    footer img {
+        width: 30px;
+        height: 35px;
+    }
+
+    .updated {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contactIcons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        margin-right: 20px;
     }
 
 }

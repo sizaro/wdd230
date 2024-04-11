@@ -45,10 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (darkModeButton) {
         darkModeButton.textContent = "🌞";
+        darkModeButton.style.backgroundColor = "white";
     }
 
     if (darkMode.classList.contains("dark-mode")) {
         darkModeButton.textContent = "🌙";
+        darkModeButton.style.backgroundColor = "white";
     }
 
     darkModeButton.addEventListener("click", () => {
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector("body").style.color = "white";
 
             document.querySelectorAll(".navMode").forEach(element => {
-                element.style.backgroundColor = "black";
+
                 element.style.color = "white";
 
             })
@@ -90,8 +92,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".nav").style.backgroundColor = "black";
             document.querySelector(".nav").style.color = "white";
 
-            document.querySelector(".weatherInformation").style.backgroundColor = "black";
-            document.querySelector(".weatherInformation").style.color = "white";
+            document.querySelector("#weatherInformation").style.backgroundColor = "black";
+            document.querySelector("#weatherInformation").style.color = "white";
+            document.querySelector("#weatherInformation").style.marginBottom = "30";
+
+
 
 
             darkModeButton.textContent = "🌙";
@@ -111,10 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector("body").style.backgroundColor = "white";
             document.querySelector("body").style.color = "black";
 
-            document.querySelector(".rentalTypes").style.backgroundColor = "greenyellow";
+            document.querySelector(".rentalTypes").style.backgroundColor = "whitesmoke";
             document.querySelector(".rentalTypes").style.color = "black";
 
-            document.querySelector(".images").style.backgroundColor = "aquamarine";
+            document.querySelector(".images").style.backgroundColor = "whitesmoke";
             document.querySelector(".images").style.color = "black";
 
             document.querySelector("header").style.backgroundColor = "white";
@@ -126,11 +131,12 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".nav").style.backgroundColor = "white";
             document.querySelector(".nav").style.color = "black";
 
-            document.querySelector(".weatherInformation").style.backgroundColor = "white";
-            document.querySelector(".weatherInformation").style.color = "black";
+            document.querySelector("#weatherInformation").style.backgroundColor = "rgba(212, 100, 100, 0.1)";
+            document.querySelector("#weatherInformation").style.color = "black";
+
 
             document.querySelectorAll(".navMode").forEach(element => {
-                element.style.backgroundColor = "white";
+
                 element.style.color = "black";
 
             })
@@ -167,7 +173,7 @@ function maxTemp(data) {
     let weatherdata = data.main.temp_max;
     let weatherPara = document.createElement("p");
     let weatherButton = document.createElement("button");
-    weatherPara.textContent = weatherdata;
+    weatherPara.textContent = `The maximum temperature today is: ${weatherdata}°F`;
     weatherButton.textContent = `X`;
     weatherPara.classList.add("weather-para");
     weatherButton.classList.add("weather-button");

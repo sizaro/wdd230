@@ -27,23 +27,23 @@
         <div class="form-content">
             <div id="fill-form">
                 <form action="thankyou.html" method="get">
-                    <h2>available pricing</h2>
+                    <h2>Reservation form</h2>
                     <label for="first-name">first name</label><br>
-                    <input type="text"><br>
-                    <label for="second-name">second name</label><br>
-                    <input type="text"><br>
+                    <input type="text" id="first-name" required><br>
+                    <label for="second-name" required>second name</label><br>
+                    <input type="text" id="second-name"><br>
                     <label for="">country</label><br>
                     <input type="text"><br>
                     <label for="">email address</label><br>
-                    <input type="text"><br>
+                    <input type="email" required pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}"><br>
                     <label for="">phone number</label><br>
-                    <input type="text"><br>
+                    <input type="number"><br>
                     <label for="">date of reservation</label><br>
                     <input type="text"><br>
                     <label for="">period</label><br>
                     <input type="text"><br>
                     <label for="">rental type</label><br>
-                    <input type="text"><br>
+                    <input type="text" required><br>
                     <label for="">number of persons</label><br>
                     <input type="text"><br><br>
                     <textarea name="description" id="description"></textarea><br><br>
@@ -82,7 +82,7 @@
     <footer>
         <div class="updated">
             <p> &copy;<span id="currentYear"></span>Ronald Bamutesiza</p>
-            <p> last modified<span id="lastUpdated"></span></p>
+            <p><span id="lastUpdated"></span></p>
         </div>
         <div class="contactIcons">
             <img src="images/facebooklogo copy.png" alt="facebook">

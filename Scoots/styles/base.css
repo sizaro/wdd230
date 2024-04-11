@@ -45,7 +45,13 @@ body {
     height: 2rem;
 }
 
+.reserve button:hover {
+    background-color: green;
+    color: white;
+}
+
 header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,12 +60,36 @@ header {
     height: 3rem;
 }
 
+.navMode:hover {
+    background-color: green;
+    color: white;
+}
+
+#weatherInformation {
+    background-color: rgba(212, 100, 100, 0.1);
+}
+
+header a {
+    font-size: 1.2rem;
+}
+
+#home-page {
+    font-size: 1.6rem;
+    font-family: serif;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
 #logoimg {
+    position: absolute;
+    left: 0;
     display: flex;
-    margin-right: 10%;
-    margin-left: 5px;
-    width: 20px;
-    height: 25px;
+    margin-left: 2px;
+    margin-top: 35px;
+    width: 200px;
+    height: 100px;
 }
 
 #logoimg img {
@@ -68,10 +98,14 @@ header {
 }
 
 #mode {
+    position: absolute;
+    right: 0;
     display: flex;
     width: 20px;
     height: 25px;
     font-size: 1.2rem;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 #humburger {
@@ -98,6 +132,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-left: 15rem;
 }
 
 .imageContent {
@@ -110,21 +145,30 @@ nav {
 }
 
 .imageContent img {
-    width: 250px;
+    width: 400px;
     height: auto;
+    transform: translateX();
+    opacity: 0.7;
+}
+
+.imageContent img:hover {
+    width: 410px;
+    height: auto;
+    opacity: 0.9;
+    border-radius: 50px;
 }
 
 .images {
-    background-color: aquamarine;
+    background-color: whitesmoke;
 }
 
 img.weather-icon {
-    width: 40px;
+    width: 80px;
     height: auto;
 }
 
 .rentalTypes {
-    background-color: greenyellow;
+    background-color: whitesmoke;
 }
 
 footer {
@@ -164,6 +208,12 @@ div#weatherInformation {
 .weather-button {
     position: absolute;
     right: 0;
+    font-size: 1.2rem;
+}
+
+.weather-button:hover {
+    background-color: green;
+    color: white;
 }
 
 .updated {
@@ -258,7 +308,17 @@ div#weatherInformation {
     }
 
     #humburger {
-        display: block;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+        right: 0;
+        top: 0;
+        margin-right: 10px;
+        margin-top: 2.2rem;
     }
 
     #humMode {
@@ -280,7 +340,6 @@ div#weatherInformation {
     }
 
     nav a {
-        display: block;
         text-decoration: none;
     }
 
@@ -290,8 +349,264 @@ div#weatherInformation {
     }
 
     .show {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
+    }
+
+
+    .imageContent img {
+        width: 250px;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .imageContent img:hover {
+        width: 260px;
+        height: auto;
+        opacity: 0.9;
+        border-radius: 50px;
+    }
+
+    .images {
+        background-color: whitesmoke;
+    }
+
+    img.weather-icon {
+        width: 80px;
+        height: auto;
+    }
+
+
+    footer {
+        margin: 20px 0 0 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer img {
+        width: 30px;
+        height: auto;
+    }
+
+    .contactIcons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+    }
+
+
+    #weatherInformation {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    #weatherInformation p {
+        padding: 0 10px;
+        text-align: center;
+        margin-right: 15px;
+    }
+
+
+}
+
+
+@media screen and (min-width:700px) and (max-width:900px) {
+
+
+    *body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 10px;
+        overflow-x: hidden;
+    }
+
+    .reserve {
+        left: 2rem;
+        position: absolute;
+        bottom: 16rem;
+
+    }
+
+    .reserve button {
+        color: black;
+        background-color: aliceblue;
+        width: 6rem;
+        height: 2rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 8rem;
+        margin-bottom: 1rem;
+        margin-top: -2rem;
+    }
+
+    .logoimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4rem;
+        margin-left: -1rem;
+        width: 10px;
+        height: 15px;
+    }
+
+    .logoimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    #mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+    }
+
+    #humburger {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+        right: 0;
+        top: 0;
+        margin-right: 10px;
+        margin-top: 2.2rem;
+    }
+
+    #humMode {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logoimg {
+        width: 10rem;
+        height: 6rem;
+        margin-top: 2.5rem;
+    }
+
+    #logoimg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav {
+        display: none;
         height: 1rem;
     }
+
+    .show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
+    }
+
+
+    .imageContent img {
+        width: 250px;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .imageContent img:hover {
+        width: 260px;
+        height: auto;
+        opacity: 0.9;
+        border-radius: 50px;
+    }
+
+    .images {
+        background-color: whitesmoke;
+    }
+
+    img.weather-icon {
+        width: 80px;
+        height: auto;
+    }
+
+
+    footer {
+        margin: 20px 0 0 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer img {
+        width: 30px;
+        height: auto;
+    }
+
+    .contactIcons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+    }
+
+
+    #weatherInformation {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    #weatherInformation p {
+        padding: 0 10px;
+    }
+
 
 }

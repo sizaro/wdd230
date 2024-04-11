@@ -29,6 +29,7 @@ main {
 
 
 header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,11 +39,45 @@ header {
 }
 
 #logoimg {
+    position: absolute;
     display: flex;
     margin-right: 10%;
     margin-left: 5px;
     width: 20px;
     height: 25px;
+    left: 0;
+}
+
+#logoimg img {
+    width: 100%;
+    height: auto;
+}
+
+
+.navMode:hover {
+    background-color: green;
+    color: white;
+}
+
+#weatherInformation {
+    background-color: rgba(212, 100, 100, 0.1);
+}
+
+header a {
+    font-size: 1.2rem;
+}
+
+#rentals-page {
+    font-size: 1.6rem;
+    font-family: serif;
+}
+
+#logoimg {
+    display: flex;
+    margin-right: 10%;
+    margin-left: 5px;
+    width: 150px;
+    height: 60px;
 }
 
 #logoimg img {
