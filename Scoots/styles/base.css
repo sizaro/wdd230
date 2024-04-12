@@ -1,5 +1,34 @@
+@import url("https://coolors.co/336699-eff1f3-4daa57-071108-931f1d");
+
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Hina+Mincho&family=Jacques+Francois&family=Linden+Hill:ital@0;1&family=Playfair+Display&family=Roboto&family=Ruluko&family=Spirax&display=swap');
+
+
 :root {
-    --animation-direction: alternate;
+    --primary-color: white;
+    --secondary-color: whitesmoke;
+    --accent1-color: green;
+    --accent2-color: blue;
+    --accent3-color: black;
+
+    --heading-font: "Lobster&family";
+    --paragraph-font: "Playfair+Display";
+
+
+    --headline-color-on-white: #1d2012;
+    --headline-color-on-color: #ebedef;
+    --paragraph-color-on-white: #1d2012;
+    --paragraph-color-on-color: #ebedef;
+    --paragraph-background-color: #1d2012;
+    --nav-link-color: #ebedef;
+    --nav-background-color: #3f84c0;
+    --nav-hover-link-color: #8eaa46;
+    --nav-hover-background-color: #b3001b;
+
+    --display-on-items: grid;
+    --display-on-content: flex;
+
+
+
 }
 
 *body {
@@ -33,7 +62,7 @@ body {
 .reserve {
     position: absolute;
     left: 10rem;
-    top: 18rem;
+    bottom: 10rem;
     height: 1rem;
 
 }
@@ -74,12 +103,18 @@ header a {
 }
 
 #home-page {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-family: serif;
+    text-decoration: underline;
 }
 
 p {
     font-size: 1.4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 {
+    color: blue;
 }
 
 #logoimg {
@@ -121,10 +156,12 @@ p {
 }
 
 
+
 nav a {
     padding: 0 3rem;
     text-decoration: none;
     color: black;
+    font-size: 1.3rem;
 }
 
 nav {
@@ -138,7 +175,7 @@ nav {
 .imageContent {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     margin: 0 10px;
     text-align: center;
     gap: 10px;
@@ -223,6 +260,11 @@ div#weatherInformation {
     flex-direction: row;
 }
 
+#currentYear {
+    padding: 0 4px;
+}
+
+
 .contactIcons {
     display: flex;
     justify-content: center;
@@ -305,6 +347,7 @@ div#weatherInformation {
         width: 10px;
         height: 15px;
         font-size: 1.2rem;
+        margin-top: 1rem;
     }
 
     #humburger {
@@ -383,12 +426,7 @@ div#weatherInformation {
 
     footer {
         margin: 20px 0 0 0;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
+        display: block;
     }
 
     footer img {
@@ -403,9 +441,13 @@ div#weatherInformation {
         align-items: center;
         flex-direction: column;
         gap: 4px;
-        position: absolute;
         right: 0;
         margin-right: 10px;
+        margin-top: -90px;
+    }
+
+    .updated {
+        display: block;
     }
 
 
@@ -494,17 +536,7 @@ div#weatherInformation {
     }
 
     #humburger {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 10px;
-        height: 15px;
-        font-size: 1.2rem;
-        right: 0;
-        top: 0;
-        margin-right: 10px;
-        margin-top: 2.2rem;
+        display: none;
     }
 
     #humMode {
@@ -530,8 +562,12 @@ div#weatherInformation {
     }
 
     nav {
-        display: none;
-        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
     }
 
     .show {

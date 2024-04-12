@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-sizing: border-box;
+
 }
 
 body {
@@ -15,7 +15,6 @@ body {
 }
 
 body,
-table,
 main {
     display: flex;
     justify-content: center;
@@ -24,9 +23,30 @@ main {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: whitesmoke;
 
 }
 
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+    background-color: whitesmoke;
+    height: 100%;
+}
+
+caption {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: blue;
+}
+
+p {
+    font-size: 1.3rem;
+}
 
 header {
     position: relative;
@@ -43,24 +63,21 @@ header {
     display: flex;
     margin-right: 10%;
     margin-left: 5px;
-    width: 20px;
-    height: 25px;
+    width: 180px;
+    height: 120px;
     left: 0;
 }
 
 #logoimg img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    margin-top: 35px;
 }
 
 
 .navMode:hover {
     background-color: green;
     color: white;
-}
-
-#weatherInformation {
-    background-color: rgba(212, 100, 100, 0.1);
 }
 
 header a {
@@ -70,26 +87,18 @@ header a {
 #rentals-page {
     font-size: 1.6rem;
     font-family: serif;
-}
-
-#logoimg {
-    display: flex;
-    margin-right: 10%;
-    margin-left: 5px;
-    width: 150px;
-    height: 60px;
-}
-
-#logoimg img {
-    width: 100%;
-    height: auto;
+    text-decoration: underline;
 }
 
 #mode {
+    position: absolute;
+    right: 0;
     display: flex;
     width: 20px;
     height: 25px;
     font-size: 1.2rem;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 #humburger {
@@ -109,6 +118,7 @@ nav a {
     padding: 0 3rem;
     text-decoration: none;
     color: black;
+    font-size: 1.3rem;
 }
 
 nav {
@@ -116,6 +126,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-left: 8rem;
 }
 
 td {
@@ -126,34 +137,44 @@ td {
     padding: 4px 50px;
 }
 
+th#table-head1 {
+    padding: 8px 100px;
+}
+
 td,
 th {
     border: 1px solid black;
 }
 
 .rental-type {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .max-persons {
-    padding: 0 45px;
+    padding-left: 20px;
+    padding-right: 60px;
 }
 
 
 footer {
-    margin-bottom: 10px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
+    height: 100%;
 }
 
+footer p {
+    margin-top: 13rem;
+}
 
 footer img {
     width: 50px;
     height: auto;
+
+
 }
 
 .updated {
@@ -171,6 +192,13 @@ footer img {
     align-items: center;
     flex-direction: row;
     gap: 5px;
+    margin-left: 10rem;
+    margin-top: 11rem;
+}
+
+#currentYear,
+#lastUpdated {
+    padding: 0 5px;
 }
 
 
@@ -222,10 +250,221 @@ footer img {
         width: 10px;
         height: 15px;
         font-size: 1.2rem;
+        margin-top: 1.5rem;
     }
 
     #humburger {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+        right: 0;
+        top: 0;
+        margin-right: 1.2rem;
+        margin-top: 2.8rem;
+    }
+
+    #humMode {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #logoimg {
+        width: 10rem;
+        height: 6rem;
+        margin-top: 2.5rem;
+    }
+
+    #logoimg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav {
+        display: none;
+        height: 1rem;
+    }
+
+    .show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
+    }
+
+
+    table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 60px;
+        background-color: whitesmoke;
+        height: 100%;
+    }
+
+
+    td {
+        padding: 20px 4px;
+    }
+
+    .table-head4 {
+        padding: 4px;
+    }
+
+    th#table-head1 {
+        padding: 0 20px;
+    }
+
+    td,
+    th {
+        border: 1px solid black;
+    }
+
+    .rental-type {
+        padding: 0 20px;
+        margin: 0 20px;
+    }
+
+    .max-persons {
+        padding-left: 20px;
+        padding-right: 60px;
+    }
+
+    caption {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: blue;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+
+
+    footer {
+
         display: block;
+    }
+
+    footer img {
+        width: 30px;
+        height: auto;
+    }
+
+    .updated {
+        display: block;
+        margin-top: 18rem;
+    }
+
+    footer p {
+        margin-top: 0;
+    }
+
+
+    footer img {
+        width: 50px;
+        height: auto;
+
+
+    }
+
+
+    .contactIcons {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        margin-right: 15px;
+        margin-top: -10rem;
+    }
+}
+
+
+@media screen and (min-width:700px) and (max-width:900px) {
+
+
+    *body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 10px;
+        overflow-x: hidden;
+    }
+
+    .reserve {
+        left: 2rem;
+        position: absolute;
+        bottom: 16rem;
+
+    }
+
+    .reserve button {
+        color: black;
+        background-color: aliceblue;
+        width: 6rem;
+        height: 2rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 8rem;
+        margin-bottom: 1rem;
+        margin-top: -2rem;
+    }
+
+    .logoimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4rem;
+        margin-left: -1rem;
+        width: 10px;
+        height: 15px;
+    }
+
+    .logoimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    #mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+    }
+
+    #humburger {
+        display: none;
     }
 
     #humMode {
@@ -247,18 +486,91 @@ footer img {
     }
 
     nav a {
-        display: block;
         text-decoration: none;
     }
 
     nav {
-        display: none;
-        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
     }
 
     .show {
-        display: block;
-        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
     }
+
+
+    .imageContent img {
+        width: 250px;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .imageContent img:hover {
+        width: 260px;
+        height: auto;
+        opacity: 0.9;
+        border-radius: 50px;
+    }
+
+    .images {
+        background-color: whitesmoke;
+    }
+
+    img.weather-icon {
+        width: 80px;
+        height: auto;
+    }
+
+
+    footer {
+        margin: 20px 0 0 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer img {
+        width: 30px;
+        height: auto;
+    }
+
+    .contactIcons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+    }
+
+
+    #weatherInformation {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    #weatherInformation p {
+        padding: 0 10px;
+    }
+
 
 }

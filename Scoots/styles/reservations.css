@@ -63,6 +63,9 @@ input:valid {
 #fill-form button {
     min-width: 200px;
     height: 30px;
+    background-color: whitesmoke;
+    color: blue;
+    font-size: 1.2rem;
 }
 
 #submit-button[type="submit"]:hover {
@@ -89,6 +92,18 @@ header {
     height: 3rem;
 }
 
+#reservation-page {
+    font-size: 1.8rem;
+    font-family: serif;
+    text-decoration: underline;
+}
+
+
+.navMode:hover {
+    background-color: green;
+    color: white;
+}
+
 #fill-form {
     margin: 0 auto;
 }
@@ -96,6 +111,11 @@ header {
 #comments-form h2,
 #comments-form p {
     text-align: center;
+}
+
+
+h2 {
+    color: blue;
 }
 
 #comments-form {
@@ -115,16 +135,30 @@ header {
     height: 25px;
 }
 
+#logoimg {
+    position: absolute;
+    left: 0;
+    display: flex;
+    margin-left: 2px;
+    margin-top: 35px;
+    width: 200px;
+    height: 100px;
+}
+
 #logoimg img {
     width: 100%;
     height: auto;
 }
 
 #mode {
+    position: absolute;
+    right: 0;
     display: flex;
     width: 20px;
     height: 25px;
     font-size: 1.2rem;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 #humburger {
@@ -144,6 +178,7 @@ nav a {
     padding: 0 3rem;
     text-decoration: none;
     color: black;
+    font-size: 1.3rem;
 }
 
 nav {
@@ -205,6 +240,212 @@ footer img {
         overflow-x: hidden;
     }
 
+    .reserve {
+        left: 2rem;
+        position: absolute;
+        bottom: 16rem;
+
+    }
+
+    .reserve button {
+        color: black;
+        background-color: aliceblue;
+        width: 6rem;
+        height: 2rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 8rem;
+        margin-bottom: 1rem;
+        margin-top: -2rem;
+    }
+
+    .logoimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4rem;
+        margin-left: -1rem;
+        width: 10px;
+        height: 15px;
+    }
+
+    .logoimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    #mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+        margin-top: 4rem;
+    }
+
+    #humburger {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+        right: 0;
+        top: 0;
+        margin-right: 10px;
+        margin-top: 1.6rem;
+    }
+
+    #humMode {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logoimg {
+        width: 10rem;
+        height: 6rem;
+        margin-top: 2.5rem;
+    }
+
+    #logoimg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav {
+        display: none;
+        height: 1rem;
+
+    }
+
+    .show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 6rem;
+        margin-top: 3rem;
+    }
+
+
+    .imageContent img {
+        width: 250px;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .imageContent img:hover {
+        width: 260px;
+        height: auto;
+        opacity: 0.9;
+        border-radius: 50px;
+    }
+
+    .images {
+        background-color: whitesmoke;
+    }
+
+    img.weather-icon {
+        width: 80px;
+        height: auto;
+    }
+
+
+    footer {
+        margin: 20px 0 0 0;
+        display: block;
+    }
+
+    footer img {
+        width: 30px;
+        height: auto;
+    }
+
+    .contactIcons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+        right: 0;
+        margin-right: 10px;
+        margin-top: -90px;
+    }
+
+    .updated {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+
+    #weatherInformation {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    #weatherInformation p {
+        padding: 0 10px;
+        text-align: center;
+        margin-right: 15px;
+    }
+
+    p#agreement-support {
+        text-align: left;
+    }
+
+
+}
+
+
+@media screen and (min-width:700px) and (max-width:900px) {
+
+
+    *body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 10px;
+        overflow-x: hidden;
+    }
+
+    .reserve {
+        left: 2rem;
+        position: absolute;
+        bottom: 16rem;
+
+    }
+
+    .reserve button {
+        color: black;
+        background-color: aliceblue;
+        width: 6rem;
+        height: 2rem;
+    }
+
     header {
         display: flex;
         justify-content: center;
@@ -241,7 +482,7 @@ footer img {
     }
 
     #humburger {
-        display: block;
+        display: none;
     }
 
     #humMode {
@@ -263,22 +504,53 @@ footer img {
     }
 
     nav a {
-        display: block;
         text-decoration: none;
     }
 
     nav {
-        display: none;
-        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
     }
 
     .show {
-        display: block;
-        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 55px;
+        margin-top: 40px;
+    }
+
+
+    .imageContent img {
+        width: 250px;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .imageContent img:hover {
+        width: 260px;
+        height: auto;
+        opacity: 0.9;
+        border-radius: 50px;
+    }
+
+    .images {
+        background-color: whitesmoke;
+    }
+
+    img.weather-icon {
+        width: 80px;
+        height: auto;
     }
 
 
     footer {
+        margin: 20px 0 0 0;
         position: relative;
         display: flex;
         justify-content: center;
@@ -287,17 +559,9 @@ footer img {
         width: 100%;
     }
 
-
     footer img {
         width: 30px;
-        height: 35px;
-    }
-
-    .updated {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        height: auto;
     }
 
     .contactIcons {
@@ -306,8 +570,25 @@ footer img {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 5px;
-        margin-right: 20px;
+        gap: 4px;
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
     }
+
+
+    #weatherInformation {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    #weatherInformation p {
+        padding: 0 10px;
+    }
+
 
 }

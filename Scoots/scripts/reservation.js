@@ -58,12 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (darkMode.classList.contains("dark-mode")) {
             document.querySelector("#mode").style.backgroundColor = "white"
-            document.querySelector(".reserve").style.backgroundColor = "black";
-            document.querySelectorAll("section").forEach(section => {
-                section.style.backgroundColor = "black";
-                section.style.color = "white";
-            }
-            )
 
             document.querySelector("body").style.backgroundColor = "black";
             document.querySelector("body").style.color = "white";
@@ -71,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".navMode").forEach(element => {
 
                 element.style.color = "white";
+                element.style.backgroundColor = "black";
 
             })
 
@@ -80,14 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             })
 
-            document.querySelector("#reserve").style.backgroundColor = "black";
-            document.querySelector("#reserve").style.color = "white"
-
-            document.querySelector(".rentalTypes").style.backgroundColor = "black";
-            document.querySelector(".rentalTypes").style.color = "white";
-
-            document.querySelector(".images").style.backgroundColor = "black";
-            document.querySelector(".images").style.color = "white";
+            document.querySelector("button").style.color = "white";
+            document.querySelector("button").style.backgroundColor = "black";
 
             document.querySelector("header").style.backgroundColor = "black";
             document.querySelector("header").style.color = "white";
@@ -97,11 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             document.querySelector(".nav").style.backgroundColor = "black";
             document.querySelector(".nav").style.color = "white";
-
-            document.querySelector("#weatherInformation").style.backgroundColor = "black";
-            document.querySelector("#weatherInformation").style.color = "white";
-            document.querySelector("#weatherInformation").style.marginBottom = "30";
-
 
 
 
@@ -116,42 +100,35 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             )
 
+
+            document.querySelector("body").style.backgroundColor = "whitesmoke";
+            document.querySelector("body").style.color = "black";
+
+            document.querySelector("header").style.backgroundColor = "whitesmoke";
+            document.querySelector("header").style.color = "black";
+
+            document.querySelector("footer").style.backgroundColor = "whitesmoke";
+            document.querySelector("footer").style.color = "black";
+
+            document.querySelector(".nav").style.backgroundColor = "whitesmoke";
+            document.querySelector(".nav").style.color = "black";
+
+
+            document.querySelectorAll(".navMode").forEach(element => {
+
+                element.style.color = "black";
+                element.style.backgroundColor = "whitesmoke";
+
+            })
+
             document.querySelectorAll("h2").forEach(element => {
 
                 element.style.color = "blue";
 
             })
 
-            document.querySelector("#reserve").style.backgroundColor = "white";
-            document.querySelector("#reserve").style.color = "black";
-
-            document.querySelector("body").style.backgroundColor = "white";
-            document.querySelector("body").style.color = "black";
-
-            document.querySelector(".rentalTypes").style.backgroundColor = "whitesmoke";
-            document.querySelector(".rentalTypes").style.color = "black";
-
-            document.querySelector(".images").style.backgroundColor = "whitesmoke";
-            document.querySelector(".images").style.color = "black";
-
-            document.querySelector("header").style.backgroundColor = "white";
-            document.querySelector("header").style.color = "black";
-
-            document.querySelector("footer").style.backgroundColor = "white";
-            document.querySelector("footer").style.color = "black";
-
-            document.querySelector(".nav").style.backgroundColor = "white";
-            document.querySelector(".nav").style.color = "black";
-
-            document.querySelector("#weatherInformation").style.backgroundColor = "rgba(212, 100, 100, 0.1)";
-            document.querySelector("#weatherInformation").style.color = "black";
-
-
-            document.querySelectorAll(".navMode").forEach(element => {
-
-                element.style.color = "black";
-
-            })
+            document.querySelector("button").style.color = "blue";
+            document.querySelector("button").style.backgroundColor = "whitesmoke";
 
             darkModeButton.textContent = "🌞";
             darkModeButton.style.backgroundColor = "white";
@@ -201,15 +178,15 @@ function maxTemp(data) {
     })
 }
 
+
+
 function displayweatherNow(data) {
     const tempNowData = data.main.temp;
     const humidNowData = data.main.humidity;
     const descriptionNow = data.weather[0].description;
     const iconCode = data.weather[0].icon;
-    /* const iconid = `https://openweathermap.org/img/w/${iconCode}.png`;*/
     tempNow.textContent = tempNowData;
     weatherNowDesc.textContent = descriptionNow;
-    /* imageNow.src = iconid;*/
     humidNow.textContent = humidNowData;
 
 

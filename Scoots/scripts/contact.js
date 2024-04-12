@@ -132,14 +132,33 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector("footer").style.backgroundColor = "black";
             document.querySelector("footer").style.color = "white";
 
-            document.querySelector("table").style.backgroundColor = "black";
-            document.querySelector("table").style.color = "white";
-
-            document.querySelector("caption").style.color = "white";
+            document.querySelector("#simple-form").style.backgroundColor = "black";
+            document.querySelector("#simple-form").style.color = "white";
 
 
+            document.querySelector("#contact-info").style.backgroundColor = "black";
+            document.querySelector("#contact-info").style.color = "white";
+
+            document.querySelector("h2").style.color = "white";
+
+            document.querySelectorAll("h2").forEach(element => {
+
+                element.style.color = "white";
+
+            })
+
+            document.querySelectorAll("h4").forEach(element => {
+
+                element.style.color = "white";
+
+            })
 
 
+            document.querySelectorAll("h3").forEach(element => {
+
+                element.style.color = "white";
+
+            })
 
             darkModeButton.textContent = "🌙";
             darkModeButton.style.backgroundColor = "black";
@@ -169,10 +188,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
             })
 
-            document.querySelector("table").style.backgroundColor = "whitesmoke";
-            document.querySelector("table").style.color = "black";
+            document.querySelector("#simple-form").style.backgroundColor = "whitesmoke";
+            document.querySelector("#simple-form").style.color = "black";
 
-            document.querySelector("caption").style.color = "blue";
+
+            document.querySelector("#contact-info").style.backgroundColor = "whitesmoke";
+            document.querySelector("#contact-info").style.color = "black";
+
+            document.querySelectorAll("h2").forEach(element => {
+
+                element.style.color = "blue";
+
+            })
+
+            document.querySelectorAll("h4").forEach(element => {
+
+                element.style.color = "blue";
+
+            })
+
+            document.querySelectorAll("h3").forEach(element => {
+
+                element.style.color = "blue";
+
+            })
 
             darkModeButton.textContent = "🌞";
             darkModeButton.style.backgroundColor = "white";
